@@ -3,8 +3,8 @@
     android:fromDegrees="90">
 
     <vector
-        android:width="24dp"
-        android:height="24dp"
+        android:width="240dp"
+        android:height="240dp"
         android:viewportWidth="24.0"
         android:viewportHeight="24.0">
         <path
