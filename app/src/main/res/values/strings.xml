@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Torch</string>
+    <string name="something_is_not_right">Something is not right</string>
+    <string name="torch">Torch</string>
+</resources>
