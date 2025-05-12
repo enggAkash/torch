@@ -92,7 +92,7 @@ class MainActivity : AppCompatActivity() {
             val adView = AdView(this@MainActivity)
             // Use a test ad unit ID during development
             // See https://developers.google.com/admob/android/test-ads
-            adView.adUnitId = "ca-app-pub-3940256099942544/6300978111"
+            adView.adUnitId = "ca-app-pub-5354242864643274/8713292011"
 
             // Request an anchored adaptive banner with a width of 360.
             adView.setAdSize(
