@@ -9,6 +9,7 @@ import android.view.View
 import android.widget.FrameLayout
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.ViewCompat
@@ -22,11 +23,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
-    private val torchUtil by lazy {
-        TorchUtil(this)
-    }
+    private val torchViewModel by viewModels<TorchViewModel>()
 
-    private val maiScope by lazy {
+    private val mainScope by lazy {
         CoroutineScope(Dispatchers.Main)
     }
 
@@ -49,7 +48,7 @@ class MainActivity : AppCompatActivity() {
         val torchIv = findViewById<ImageView>(R.id.torchIv)
         val adViewContainer = findViewById<FrameLayout>(R.id.ad_view_container)
 
-        setListeners(brightNessIv, rootLayout, torchIv)
+        setListeners(brightNessIv, torchIv)
 
         observeData(rootLayout, brightNessIv)
 
@@ -88,7 +87,7 @@ class MainActivity : AppCompatActivity() {
             MobileAds.initialize(this@MainActivity) {}
         }
 
-        maiScope.launch {
+        mainScope.launch {
             val adView = AdView(this@MainActivity)
             // Use a test ad unit ID during development
             // See https://developers.google.com/admob/android/test-ads
@@ -112,15 +111,14 @@ class MainActivity : AppCompatActivity() {
 
     private fun setListeners(
         brightNessIv: ImageView,
-        rootLayout: ConstraintLayout,
         torchIv: ImageView
     ) {
         brightNessIv.setOnClickListener {
-            torchClicked(rootLayout, brightNessIv)
+            torchClicked()
         }
 
         torchIv.setOnClickListener {
-            torchClicked(rootLayout, brightNessIv)
+            torchClicked()
         }
     }
 
@@ -128,7 +126,7 @@ class MainActivity : AppCompatActivity() {
         rootLayout: ConstraintLayout,
         brightNessIv: ImageView
     ) {
-        torchUtil.isTorchOn.observe(this) { isTorchOn ->
+        torchViewModel.isTorchOn.observe(this) { isTorchOn ->
 
             if (isTorchOn) {
                 rootLayout.setBackgroundResource(android.R.color.white)
@@ -140,18 +138,22 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun torchClicked(rootLayout: ConstraintLayout, brightNessIv: ImageView) {
-        if (torchUtil.isTorchOn.value == true) {
+    private fun torchClicked() {
+        if (torchViewModel.isTorchOn.value == true) {
             // Turn OFF the torch
-            torchUtil.turnOnTorch(false)
+            torchViewModel.turnOnTorch(false)
         } else {
             // Turn ON the torch
-            torchUtil.turnOnTorch(true)
+            torchViewModel.turnOnTorch(true)
         }
     }
 
     override fun onDestroy() {
-        torchUtil.turnOnTorch(false)
+
+        if (!isChangingConfigurations) {
+            // user is closing the app, turn off the flash light
+            torchViewModel.turnOnTorch(false)
+        }
         super.onDestroy()
     }
 }

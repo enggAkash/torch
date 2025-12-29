@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.engineerakash.torch"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.engineerakash.torch"
         minSdk = 23
-        targetSdk = 35
+        targetSdk = 36
         versionCode = 3
         versionName = "1.2"
 
@@ -43,6 +43,9 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.play.services.ads)
+
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.activity.ktx)
 
     testImplementation(libs.junit)
 
