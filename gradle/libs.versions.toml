@@ -1,5 +1,4 @@
 [versions]
-activityKtx = "1.12.2"
 agp = "8.13.2"
 kotlin = "2.3.0"
 coreKtx = "1.17.0"
@@ -14,7 +13,6 @@ constraintlayout = "2.2.1"
 playServicesAds = "24.9.0"
 
 [libraries]
-androidx-activity-ktx = { module = "androidx.activity:activity-ktx", version.ref = "activityKtx" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
