@@ -19,8 +19,19 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildFeatures {
+        buildConfig = true
+    }
+
     buildTypes {
+        debug {
+            // Google's sample banner unit — never serves live ads.
+            // https://developers.google.com/admob/android/test-ads
+            buildConfigField("String", "AD_UNIT_ID", "\"ca-app-pub-3940256099942544/6300978111\"")
+        }
         release {
+            buildConfigField("String", "AD_UNIT_ID", "\"ca-app-pub-5354242864643274/8713292011\"")
+
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),

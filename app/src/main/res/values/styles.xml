@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.Torch.Button.Cta" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/purple_primary</item>
+        <item name="cornerRadius">@dimen/cta_corner_radius</item>
+        <item name="android:minHeight">@dimen/cta_height</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textSize">@dimen/cta_text_size</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconTint">@color/white</item>
+        <item name="iconPadding">8dp</item>
+        <item name="iconSize">@dimen/cta_icon_size</item>
+    </style>
+
+    <style name="Widget.Torch.Button.Cta.Sos">
+        <!-- Darker than the badge red so the white label meets AA contrast (4.98:1) -->
+        <item name="backgroundTint">@color/sos_red_dark</item>
+    </style>
+
+    <style name="Widget.Torch.TabLayout" parent="Widget.Material3.TabLayout">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="tabIndicator">@drawable/tab_indicator_pill</item>
+        <item name="tabIndicatorColor">@color/purple_primary</item>
+        <item name="tabIndicatorGravity">stretch</item>
+        <item name="tabIndicatorFullWidth">true</item>
+        <item name="tabIndicatorAnimationMode">elastic</item>
+        <item name="tabIconTint">@color/tab_icon_tint</item>
+        <item name="tabTextColor">@color/text_primary</item>
+        <item name="tabSelectedTextColor">@color/white</item>
+        <item name="tabInlineLabel">true</item>
+        <item name="tabRippleColor">@color/tab_ripple</item>
+        <item name="tabGravity">fill</item>
+        <item name="tabMode">fixed</item>
+    </style>
+
+    <style name="TextAppearance.Torch.HeaderTitle" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="TextAppearance.Torch.StatusTitle" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="TextAppearance.Torch.Caption" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+</resources>

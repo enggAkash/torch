@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Smaller illustrations in landscape so less of the screen is scroll-only -->
+    <dimen name="illustration_size">140dp</dimen>
+    <dimen name="beam_width">120dp</dimen>
+    <dimen name="beam_height">70dp</dimen>
+    <dimen name="strobe_circle_size">140dp</dimen>
+    <dimen name="strobe_bolt_padding">30dp</dimen>
+    <dimen name="sos_rings_size">160dp</dimen>
+    <dimen name="sos_badge_size">96dp</dimen>
+</resources>

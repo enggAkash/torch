@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Lens circle is wound counter-clockwise so nonZero fill cuts it out -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M6,2h12v4l-3,4v12H9V10L6,6V2z M12,13.5a1.5,1.5 0 1,0 0,3a1.5,1.5 0 1,0 0,-3z" />
+
+</vector>

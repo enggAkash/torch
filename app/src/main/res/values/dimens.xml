@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="screen_margin_horizontal">20dp</dimen>
+    <dimen name="header_margin_top">16dp</dimen>
+    <dimen name="tab_bar_corner_radius">10dp</dimen>
+    <dimen name="tab_bar_content_padding">4dp</dimen>
+    <dimen name="tab_pill_corner_radius">10dp</dimen>
+
+    <dimen name="illustration_size">200dp</dimen>
+    <dimen name="beam_width">160dp</dimen>
+    <dimen name="beam_height">120dp</dimen>
+    <dimen name="strobe_circle_size">180dp</dimen>
+    <dimen name="strobe_bolt_padding">40dp</dimen>
+    <dimen name="sos_rings_size">220dp</dimen>
+    <dimen name="sos_badge_size">120dp</dimen>
+    <dimen name="sos_badge_corner_radius">28dp</dimen>
+
+    <dimen name="cta_corner_radius">16dp</dimen>
+    <dimen name="cta_height">56dp</dimen>
+    <dimen name="cta_icon_size">22dp</dimen>
+    <dimen name="cta_text_size">18sp</dimen>
+    <dimen name="cta_margin_top">24dp</dimen>
+    <dimen name="cta_margin_bottom">16dp</dimen>
+</resources>

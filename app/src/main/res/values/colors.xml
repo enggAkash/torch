@@ -2,4 +2,20 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="screen_background">#F4F2FB</color>
+    <color name="surface_card">#FFFFFFFF</color>
+    <color name="purple_primary">#5B3DC8</color>
+    <color name="purple_bright">#6D4CFF</color>
+    <color name="purple_soft">#EDE9FB</color>
+    <color name="text_primary">#1C1B22</color>
+    <color name="text_secondary">#6F6B80</color>
+    <color name="sos_red">#E53935</color>
+    <color name="sos_red_dark">#D32F2F</color>
+    <color name="tab_ripple">#1F5B3DC8</color>
+    <color name="slider_track_inactive">#8F7DC5</color>
+    <color name="sos_ring_outer">#14E53935</color>
+    <color name="sos_ring_mid">#1FE53935</color>
+    <color name="sos_ring_inner">#29E53935</color>
+    <color name="beam_amber">#FFC57D</color>
 </resources>
