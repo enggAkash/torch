@@ -18,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updateLayoutParams
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
@@ -38,6 +39,15 @@ class MainActivity : AppCompatActivity() {
 
     private val backgroundScope by lazy {
         CoroutineScope(Dispatchers.IO)
+    }
+
+    /**
+     * Anchored adaptive banner for a 360dp-wide slot. Resolved once per activity so the
+     * space reserved up front is exactly what the loaded ad occupies; the activity is
+     * recreated on rotation, so this picks up the new orientation's height.
+     */
+    private val adSize by lazy {
+        AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this, 360)
     }
 
     private lateinit var modeTabLayout: TabLayout
@@ -89,6 +99,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initAds(adViewContainer: FrameLayout) {
+        reserveAdSpace(adViewContainer)
+
         val connectivityManager = getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager
         val networkRequest = NetworkRequest.Builder()
             .addCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
@@ -114,6 +126,17 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Claim the banner's slot before it loads. Without it the container is 0dp tall
+     * until an ad arrives, and the CTA below the mode content jumps upward mid-session.
+     */
+    private fun reserveAdSpace(adViewContainer: FrameLayout) {
+        val heightPx = adSize.getHeightInPixels(this)
+        if (heightPx > 0) {
+            adViewContainer.updateLayoutParams { height = heightPx }
+        }
+    }
+
     private fun loadAd(adViewContainer: FrameLayout) {
         backgroundScope.launch {
             // Initialize the Google Mobile Ads SDK on a background thread.
@@ -125,12 +148,7 @@ class MainActivity : AppCompatActivity() {
             // Test unit in debug, live unit in release. See app/build.gradle.kts
             adView.adUnitId = BuildConfig.AD_UNIT_ID
 
-            // Request an anchored adaptive banner with a width of 360.
-            adView.setAdSize(
-                AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(
-                    this@MainActivity, 360
-                )
-            )
+            adView.setAdSize(adSize)
 
             // Replace ad container with new ad view.
             adViewContainer.removeAllViews()
