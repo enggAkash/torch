@@ -3,7 +3,8 @@
     <string name="something_is_not_right">Something is not right</string>
 
     <string name="header_title">Flashlight</string>
-    <string name="share_app_message">Check out this flashlight app: https://play.google.com/store/apps/details?id=com.engineerakash.torch</string>
+    <string name="share_app_message">🔦 Turn your phone into a proper flashlight!\n\nI am using Torch and it does way more than just glow:\n\n💡 TORCH — instant, full-brightness light with a single tap\n🎉 STROBE — adjustable flash speed. Take it to a concert, raise your phone and stand out from the crowd\n🆘 SOS — automatic Morse distress signal that keeps flashing until help arrives\n\nFree, tiny download, no sign-up. Grab it here:\nhttps://play.google.com/store/apps/details?id=com.engineerakash.torch</string>
+    <string name="share_app_subject">Torch — flashlight, strobe and SOS in one app</string>
     <string name="share_via">Share via</string>
 
     <string name="tab_torch">Torch</string>
@@ -38,5 +39,7 @@
 
     <string name="cd_share_app">Share this app</string>
     <string name="cd_flashlight_illustration">Toggle flashlight</string>
+    <string name="cd_strobe_illustration">Toggle strobe</string>
+    <string name="cd_sos_illustration">Toggle SOS</string>
     <string name="cd_strobe_speed">Strobe speed</string>
 </resources>

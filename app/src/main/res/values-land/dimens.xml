@@ -8,4 +8,13 @@
     <dimen name="strobe_bolt_padding">30dp</dimen>
     <dimen name="sos_rings_size">160dp</dimen>
     <dimen name="sos_badge_size">96dp</dimen>
+    <dimen name="sos_badge_text_size">26sp</dimen>
+
+    <!-- Tighter chrome: landscape has ~half the height to spend -->
+    <dimen name="header_margin_top">8dp</dimen>
+    <dimen name="cta_margin_top">16dp</dimen>
+
+    <!-- Anchored adaptive banners are 32dp tall on a landscape-height screen, so
+         reserving the portrait 50dp would leave a dead strip under the ad. -->
+    <dimen name="ad_banner_reserved_height">32dp</dimen>
 </resources>

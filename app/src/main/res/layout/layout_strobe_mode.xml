@@ -20,7 +20,9 @@
         android:layout_width="@dimen/strobe_circle_size"
         android:layout_height="@dimen/strobe_circle_size"
         android:background="@drawable/bg_circle_soft"
-        android:importantForAccessibility="no"
+        android:contentDescription="@string/cd_strobe_illustration"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
         android:padding="@dimen/strobe_bolt_padding"
         android:src="@drawable/vector_strobe" />
 

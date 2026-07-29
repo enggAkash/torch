@@ -1,5 +1,7 @@
 package com.engineerakash.torch
 
+import android.animation.Animator
+import android.animation.AnimatorInflater
 import android.content.Intent
 import android.net.ConnectivityManager
 import android.net.Network
@@ -62,6 +64,11 @@ class MainActivity : AppCompatActivity() {
     private lateinit var strobeSpeedSlider: Slider
     private lateinit var strobeToggleBtn: MaterialButton
     private lateinit var sosToggleBtn: MaterialButton
+    private lateinit var strobePulse: Pulse
+    private lateinit var sosPulse: Pulse
+
+    // Mirrors TorchViewModel.activeMode so onStart can resume the right pulse
+    private var runningMode: TorchMode? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
@@ -96,6 +103,8 @@ class MainActivity : AppCompatActivity() {
         strobeSpeedSlider = findViewById(R.id.strobeSpeedSlider)
         strobeToggleBtn = findViewById(R.id.strobeToggleBtn)
         sosToggleBtn = findViewById(R.id.sosToggleBtn)
+        strobePulse = Pulse(findViewById(R.id.strobeIv))
+        sosPulse = Pulse(findViewById(R.id.sosRingsIv))
     }
 
     private fun initAds(adViewContainer: FrameLayout) {
@@ -186,6 +195,10 @@ class MainActivity : AppCompatActivity() {
             torchViewModel.toggleStrobe()
         }
 
+        findViewById<ImageView>(R.id.strobeIv).setOnClickListener {
+            torchViewModel.toggleStrobe()
+        }
+
         strobeSpeedSlider.addOnChangeListener { _, value, fromUser ->
             if (fromUser) {
                 torchViewModel.setStrobeRate(value.toInt())
@@ -199,6 +212,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         sosToggleBtn.setOnClickListener {
+            torchViewModel.toggleSos()
+        }
+
+        findViewById<View>(R.id.sosIllustrationContainer).setOnClickListener {
             torchViewModel.toggleSos()
         }
     }
@@ -224,13 +241,17 @@ class MainActivity : AppCompatActivity() {
         }
 
         torchViewModel.activeMode.observe(this) { activeMode ->
+            runningMode = activeMode
+
             val strobeRunning = activeMode == TorchMode.STROBE
             strobeToggleBtn.setText(if (strobeRunning) R.string.stop_strobe else R.string.start_strobe)
             strobeToggleBtn.setIconResource(if (strobeRunning) R.drawable.ic_pause else R.drawable.ic_play)
+            if (strobeRunning) strobePulse.start() else strobePulse.stop()
 
             val sosRunning = activeMode == TorchMode.SOS
             sosToggleBtn.setText(if (sosRunning) R.string.stop_sos else R.string.start_sos)
             sosToggleBtn.setIconResource(if (sosRunning) R.drawable.ic_pause else R.drawable.ic_play)
+            if (sosRunning) sosPulse.start() else sosPulse.stop()
         }
 
         torchViewModel.strobeRate.observe(this) { rate ->
@@ -251,10 +272,27 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onStart() {
+        super.onStart()
+        // activeMode is unchanged across a stop/start, so LiveData won't re-deliver it
+        when (runningMode) {
+            TorchMode.STROBE -> strobePulse.start()
+            TorchMode.SOS -> sosPulse.start()
+            else -> Unit
+        }
+    }
+
+    override fun onStop() {
+        // The light keeps flashing in the background, but the pulse has nothing to draw there
+        strobePulse.stop()
+        sosPulse.stop()
+        super.onStop()
+    }
+
     private fun shareApp() {
         val shareIntent = Intent(Intent.ACTION_SEND).apply {
             type = "text/plain"
-            putExtra(Intent.EXTRA_SUBJECT, getString(R.string.app_name))
+            putExtra(Intent.EXTRA_SUBJECT, getString(R.string.share_app_subject))
             putExtra(Intent.EXTRA_TEXT, getString(R.string.share_app_message))
         }
         startActivity(Intent.createChooser(shareIntent, getString(R.string.share_via)))
@@ -267,5 +305,33 @@ class MainActivity : AppCompatActivity() {
             torchViewModel.stopAll()
         }
         super.onDestroy()
+    }
+
+    /**
+     * Breathing illustration for a running mode: the on-screen counterpart of the
+     * flashing light, so the screen shows more than a changed button label.
+     */
+    private class Pulse(private val target: View) {
+        private var animator: Animator? = null
+
+        fun start() {
+            val current = animator ?: AnimatorInflater
+                .loadAnimator(target.context, R.animator.pulse_illustration)
+                .also {
+                    it.setTarget(target)
+                    animator = it
+                }
+            if (!current.isRunning) {
+                current.start()
+            }
+        }
+
+        fun stop() {
+            animator?.cancel()
+            // cancel() leaves the view wherever the pulse was, so restore the resting look
+            target.scaleX = 1f
+            target.scaleY = 1f
+            target.alpha = 1f
+        }
     }
 }

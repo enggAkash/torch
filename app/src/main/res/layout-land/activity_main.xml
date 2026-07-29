@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Landscape header: title, tab pill and share share one row instead of stacking,
+     which buys back ~50dp of the little vertical space landscape has for the modes. -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/headerTitleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/screen_margin_horizontal"
+        android:text="@string/app_name"
+        android:textAppearance="@style/TextAppearance.Torch.HeaderTitle"
+        app:layout_constraintBottom_toBottomOf="@id/tabBarCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tabBarCard" />
+
+    <ImageButton
+        android:id="@+id/shareBtn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/cd_share_app"
+        android:src="@drawable/ic_share"
+        app:layout_constraintBottom_toBottomOf="@id/tabBarCard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tabBarCard" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/tabBarCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/header_margin_top"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="@color/surface_card"
+        app:cardCornerRadius="@dimen/tab_bar_corner_radius"
+        app:cardElevation="0dp"
+        app:contentPadding="0dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toStartOf="@id/shareBtn"
+        app:layout_constraintStart_toEndOf="@id/headerTitleTv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeWidth="0dp">
+
+        <!-- auto, not the style's fixed: fixed splits a wrap_content bar into equal
+             thirds and ellipsizes "Torch"/"Strobe" down to the width "SOS" needs. -->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/modeTabLayout"
+            style="@style/Widget.Torch.TabLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:tabGravity="center"
+            app:tabMode="auto">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/ic_tab_torch"
+                android:text="@string/tab_torch" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/ic_tab_strobe"
+                android:text="@string/tab_strobe" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/ic_tab_sos"
+                android:text="@string/tab_sos" />
+        </com.google.android.material.tabs.TabLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Kept as a scroller purely as a safety net for unusually short screens; the
+         two-column mode layouts are sized to fit without scrolling. -->
+    <ScrollView
+        android:id="@+id/modeScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@id/ad_view_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabBarCard">
+
+        <FrameLayout
+            android:id="@+id/modeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/torchModeRoot"
+                layout="@layout/layout_torch_mode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <include
+                android:id="@+id/strobeModeRoot"
+                layout="@layout/layout_strobe_mode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/sosModeRoot"
+                layout="@layout/layout_sos_mode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+        </FrameLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/ad_view_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/ad_banner_reserved_height"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

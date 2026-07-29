@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Landscape: illustration on one side, text and CTA on the other. See
+     layout-land/layout_torch_mode.xml for the reasoning. -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/sosModeRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
+    android:baselineAligned="false"
+    android:gravity="center"
+    android:orientation="horizontal"
     android:paddingStart="@dimen/screen_margin_horizontal"
     android:paddingEnd="@dimen/screen_margin_horizontal">
-
-    <Space
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
 
     <FrameLayout
         android:id="@+id/sosIllustrationContainer"
@@ -48,36 +46,36 @@
             android:textStyle="bold" />
     </FrameLayout>
 
-    <TextView
-        android:id="@+id/sosTitleTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center_horizontal"
-        android:text="@string/sos_mode"
-        android:textAppearance="@style/TextAppearance.Torch.StatusTitle" />
+    <LinearLayout
+        android:layout_width="@dimen/mode_controls_width"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/mode_column_gap"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/sosCaptionTv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:gravity="center_horizontal"
-        android:text="@string/sos_caption"
-        android:textAppearance="@style/TextAppearance.Torch.Caption" />
+        <TextView
+            android:id="@+id/sosTitleTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sos_mode"
+            android:textAppearance="@style/TextAppearance.Torch.StatusTitle" />
 
-    <Space
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
+        <TextView
+            android:id="@+id/sosCaptionTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/sos_caption"
+            android:textAppearance="@style/TextAppearance.Torch.Caption" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/sosToggleBtn"
-        style="@style/Widget.Torch.Button.Cta.Sos"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/cta_margin_bottom"
-        android:text="@string/start_sos"
-        app:icon="@drawable/ic_play" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sosToggleBtn"
+            style="@style/Widget.Torch.Button.Cta.Sos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cta_margin_top"
+            android:text="@string/start_sos"
+            app:icon="@drawable/ic_play" />
+    </LinearLayout>
 
 </LinearLayout>
