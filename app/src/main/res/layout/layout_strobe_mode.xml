@@ -22,7 +22,6 @@
         android:background="@drawable/bg_circle_soft"
         android:contentDescription="@string/cd_strobe_illustration"
         android:focusable="true"
-        android:foreground="?attr/selectableItemBackgroundBorderless"
         android:padding="@dimen/strobe_bolt_padding"
         android:src="@drawable/vector_strobe" />
 

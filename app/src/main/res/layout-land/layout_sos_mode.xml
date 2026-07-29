@@ -17,8 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/cd_sos_illustration"
-        android:focusable="true"
-        android:foreground="?attr/selectableItemBackgroundBorderless">
+        android:focusable="true">
 
         <!-- The padding is the room the pulse animation grows into: the rings are
              drawn inside it, so scaling up stays within the view's own bounds and

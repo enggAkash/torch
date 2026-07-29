@@ -32,7 +32,6 @@
         android:layout_height="@dimen/illustration_size"
         android:contentDescription="@string/cd_flashlight_illustration"
         android:focusable="true"
-        android:foreground="?attr/selectableItemBackgroundBorderless"
         android:src="@drawable/ic_flashlight" />
 
     <TextView
