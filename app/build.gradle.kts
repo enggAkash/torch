@@ -3,6 +3,8 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("com.google.gms.google-services")
+    id("com.google.firebase.crashlytics")
 }
 
 android {
@@ -61,6 +63,11 @@ dependencies {
     implementation(libs.play.services.ads)
 
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
+
+    implementation(platform("com.google.firebase:firebase-bom:34.17.0"))
+
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-crashlytics")
 
     testImplementation(libs.junit)
 

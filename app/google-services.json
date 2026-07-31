@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "221880622819",
+    "project_id": "torch-9bb6d",
+    "storage_bucket": "torch-9bb6d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:221880622819:android:1e1a3762eb6d7691fd2fd6",
+        "android_client_info": {
+          "package_name": "com.engineerakash.torch"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx_5Ymr9rQda15H-10-v4hGbzcV-dp9_U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
