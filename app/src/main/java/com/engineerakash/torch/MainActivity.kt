@@ -52,6 +52,7 @@ class MainActivity : AppCompatActivity() {
         AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this, 360)
     }
 
+    private lateinit var mainRoot: View
     private lateinit var modeTabLayout: TabLayout
     private lateinit var torchModeRoot: View
     private lateinit var strobeModeRoot: View
@@ -91,6 +92,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun findViews() {
+        mainRoot = findViewById(R.id.main)
         modeTabLayout = findViewById(R.id.modeTabLayout)
         torchModeRoot = findViewById(R.id.torchModeRoot)
         strobeModeRoot = findViewById(R.id.strobeModeRoot)
@@ -238,6 +240,7 @@ class MainActivity : AppCompatActivity() {
             torchStatusTitleTv.setText(if (isOn) R.string.flashlight_is_on else R.string.flashlight_is_off)
             torchStatusCaptionTv.setText(if (isOn) R.string.tap_to_turn_off else R.string.tap_to_turn_on)
             torchToggleBtn.setText(if (isOn) R.string.turn_off else R.string.turn_on)
+            updateScreenBackground()
         }
 
         torchViewModel.activeMode.observe(this) { activeMode ->
@@ -252,6 +255,8 @@ class MainActivity : AppCompatActivity() {
             sosToggleBtn.setText(if (sosRunning) R.string.stop_sos else R.string.start_sos)
             sosToggleBtn.setIconResource(if (sosRunning) R.drawable.ic_pause else R.drawable.ic_play)
             if (sosRunning) sosPulse.start() else sosPulse.stop()
+
+            updateScreenBackground()
         }
 
         torchViewModel.strobeRate.observe(this) { rate ->
@@ -270,6 +275,14 @@ class MainActivity : AppCompatActivity() {
                 torchViewModel.onErrorShown()
             }
         }
+    }
+
+    /** Slightly grey while idle, the brighter lavender while any mode has the light going. */
+    private fun updateScreenBackground() {
+        val lit = torchViewModel.torchUiOn.value == true || runningMode != null
+        mainRoot.setBackgroundResource(
+            if (lit) R.color.screen_background_lit else R.color.screen_background
+        )
     }
 
     override fun onStart() {
