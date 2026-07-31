@@ -8,7 +8,7 @@
 
     <dimen name="illustration_size">200dp</dimen>
     <dimen name="beam_width">160dp</dimen>
-    <dimen name="beam_height">120dp</dimen>
+    <dimen name="beam_height">150dp</dimen>
     <dimen name="strobe_circle_size">180dp</dimen>
     <dimen name="strobe_bolt_padding">40dp</dimen>
     <dimen name="sos_rings_size">220dp</dimen>
