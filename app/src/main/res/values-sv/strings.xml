@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="something_is_not_right">Något stämmer inte</string>
+
+    <string name="share_app_message">🔦 Förvandla din telefon till en riktig ficklampa!\n\nJag använder Torch, och den gör mycket mer än att bara lysa:\n\n💡 FICKLAMPA — omedelbart ljus med full styrka med ett enda tryck\n🎉 STROBE — justerbar blinkhastighet. Ta med den på konsert, lyft telefonen och stick ut från mängden\n🆘 SOS — automatisk nödsignal i morse som fortsätter blinka tills hjälpen kommer\n\nGratis, liten nedladdning, ingen registrering. Hämta den här:\nhttps://play.google.com/store/apps/details?id=com.engineerakash.torch</string>
+    <string name="share_app_subject">Torch — ficklampa, strobe och SOS i en och samma app</string>
+    <string name="share_via">Dela via</string>
+
+    <string name="tab_torch">Lampa</string>
+    <string name="tab_strobe">Strobe</string>
+    <string name="tab_sos">SOS</string>
+
+    <string name="flashlight_is_on">Ficklampan är PÅ</string>
+    <string name="flashlight_is_off">Ficklampan är AV</string>
+    <string name="tap_to_turn_on">Tryck på knappen för att slå på</string>
+    <string name="tap_to_turn_off">Tryck på knappen för att stänga av</string>
+    <string name="turn_on">Slå på</string>
+    <string name="turn_off">Stäng av</string>
+
+    <string name="strobe_mode">Strobeläge</string>
+    <string name="strobe_caption">Justera hastigheten och starta</string>
+    <string name="strobe_warning">Blinkande ljus kan påverka ljuskänsliga personer</string>
+    <string name="speed">Hastighet</string>
+    <plurals name="flashes_per_sec">
+        <item quantity="one">%d blinkning / sek</item>
+        <item quantity="other">%d blinkningar / sek</item>
+    </plurals>
+    <string name="start_strobe">Starta strobe</string>
+    <string name="stop_strobe">Stoppa strobe</string>
+
+    <string name="sos">SOS</string>
+    <string name="sos_mode">SOS-läge</string>
+    <string name="sos_caption">Nödsignal (··· −−− ···)</string>
+    <string name="start_sos">Starta SOS</string>
+    <string name="stop_sos">Stoppa SOS</string>
+
+    <string name="flash_not_available">Blixten är inte tillgänglig på den här enheten</string>
+
+    <string name="cd_share_app">Dela den här appen</string>
+    <string name="cd_flashlight_illustration">Slå på eller av ficklampan</string>
+    <string name="cd_strobe_illustration">Slå på eller av stroben</string>
+    <string name="cd_sos_illustration">Slå på eller av SOS</string>
+    <string name="cd_strobe_speed">Strobehastighet</string>
+</resources>

@@ -34,6 +34,8 @@ android {
             "hi", "bn", "gu", "mr", "pa", "ta", "te", "kn", "ml", "ur",
             "sw", "af", "zu", "xh", "ha", "ms", "b+fil", "my",
             "ps", "b+fa+AF", "ku", "b+ckb",
+            // "iw" is Android's legacy code for Hebrew; "nb" is Norwegian Bokmål
+            "nb", "da", "sv", "fi", "ko", "iw",
         )
         // Emits android:localeConfig from the locales above so Android 13+ offers
         // the app's languages in the system per-app language setting.
