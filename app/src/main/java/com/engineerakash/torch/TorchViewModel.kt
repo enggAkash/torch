@@ -5,19 +5,24 @@ import android.content.Context
 import android.hardware.camera2.CameraAccessException
 import android.hardware.camera2.CameraCharacteristics
 import android.hardware.camera2.CameraManager
+import android.os.Handler
+import android.os.Looper
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.NonCancellable
+import kotlinx.coroutines.asCoroutineDispatcher
 import kotlinx.coroutines.cancelAndJoin
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import java.util.concurrent.Executors
+import java.util.concurrent.RejectedExecutionException
 
 class TorchViewModel(private val application: Application) : AndroidViewModel(application) {
 
@@ -30,7 +35,16 @@ class TorchViewModel(private val application: Application) : AndroidViewModel(ap
 
     private val cameraManager: CameraManager? =
         application.getSystemService(Context.CAMERA_SERVICE) as? CameraManager
-    private val cameraId: String? = resolveFlashCameraId()
+
+    // The only thread that talks to CameraManager: keeps its slow binder calls off the
+    // main thread (they can stall for seconds behind a wedged camera HAL) and makes
+    // every setTorchMode FIFO, so a queued off can never overtake a later on.
+    private val torchExecutor = Executors.newSingleThreadExecutor { r -> Thread(r, "torch-camera") }
+    private val torchDispatcher = torchExecutor.asCoroutineDispatcher()
+
+    // Resolved asynchronously on the torch thread; stays null when there is no flash unit
+    @Volatile
+    private var cameraId: String? = null
 
     private val torchCallback = object : CameraManager.TorchCallback() {
         override fun onTorchModeChanged(cameraId: String, enabled: Boolean) {
@@ -85,7 +99,12 @@ class TorchViewModel(private val application: Application) : AndroidViewModel(ap
     private var activeJob: Job? = null
 
     init {
-        cameraManager?.registerTorchCallback(torchCallback, null)
+        viewModelScope.launch(torchDispatcher) {
+            cameraId = resolveFlashCameraId()
+            // Explicit main handler: the torch thread has no Looper, and this keeps
+            // callback delivery on the main thread
+            cameraManager?.registerTorchCallback(torchCallback, Handler(Looper.getMainLooper()))
+        }
     }
 
     fun selectTab(mode: TorchMode) {
@@ -95,10 +114,20 @@ class TorchViewModel(private val application: Application) : AndroidViewModel(ap
     }
 
     fun toggleTorch() {
+        // Decided synchronously on main so a fast double-tap still reads its own write
         val turnOn = !lastKnownTorchOn
         stopAll()
-        if (turnOn && setTorchInternal(true)) {
-            lastKnownTorchOn = true
+        if (!turnOn) return
+        // Optimistic; corrected below if the hardware call fails
+        lastKnownTorchOn = true
+        val previous = activeJob
+        activeJob = viewModelScope.launch {
+            // Joining first means a cancelled loop's finally (torch off) always lands
+            // before — and so can never extinguish — this turn-on
+            previous?.cancelAndJoin()
+            if (!setTorchHardware(true)) {
+                lastKnownTorchOn = false
+            }
         }
     }
 
@@ -130,7 +159,14 @@ class TorchViewModel(private val application: Application) : AndroidViewModel(ap
         // Cancel but keep the reference: launchExclusive must still be able to join the
         // old job so its finally can't extinguish the next mode's first flash
         activeJob?.cancel()
-        setTorchInternal(false)
+        // Raw enqueue rather than a viewModelScope coroutine: this must still run when
+        // called from onDestroy moments before the scope is cancelled
+        try {
+            torchExecutor.execute { setTorchInternal(false) }
+        } catch (e: RejectedExecutionException) {
+            // Executor already shut down: onCleared runs BEFORE the activity's onDestroy
+            // body, and its own stopAll turned the torch off
+        }
         lastKnownTorchOn = false
     }
 
@@ -146,15 +182,29 @@ class TorchViewModel(private val application: Application) : AndroidViewModel(ap
             previous?.cancelAndJoin()
             _activeMode.value = mode
             try {
-                withContext(Dispatchers.Default, block)
+                withContext(torchDispatcher, block)
             } finally {
-                setTorchInternal(false)
-                if (_activeMode.value == mode) {
-                    _activeMode.value = null
+                // NonCancellable: the job is usually already cancelled here, and a plain
+                // withContext would throw before running its block. It must wrap the
+                // dispatcher hop as a NESTED withContext — combined as one context, the
+                // hop resumes onto the cancelled outer job and throws on return, which
+                // would skip the _activeMode reset and strand the UI in the running state.
+                // The off stays unconditional as a safety net; it can't extinguish a later
+                // turn-on because every turn-on joins this job first, and hardware calls
+                // are FIFO on the torch thread.
+                withContext(NonCancellable) {
+                    withContext(torchDispatcher) { setTorchInternal(false) }
+                    if (_activeMode.value == mode) {
+                        _activeMode.value = null
+                    }
                 }
             }
         }
     }
+
+    /** Runs the blocking hardware call on the torch thread. */
+    private suspend fun setTorchHardware(on: Boolean): Boolean =
+        withContext(torchDispatcher) { setTorchInternal(on) }
 
     private suspend fun CoroutineScope.strobeLoop() {
         while (isActive) {
@@ -212,19 +262,36 @@ class TorchViewModel(private val application: Application) : AndroidViewModel(ap
         }
     }
 
-    private fun resolveFlashCameraId(): String? = try {
-        cameraManager?.cameraIdList?.firstOrNull { id ->
-            cameraManager.getCameraCharacteristics(id)
-                .get(CameraCharacteristics.FLASH_INFO_AVAILABLE) == true
+    private fun resolveFlashCameraId(): String? {
+        val manager = cameraManager ?: return null
+        val ids = try {
+            manager.cameraIdList
+        } catch (e: CameraAccessException) {
+            e.printStackTrace()
+            return null
         }
-    } catch (e: CameraAccessException) {
-        e.printStackTrace()
-        null
+        return ids.firstOrNull { id ->
+            try {
+                manager.getCameraCharacteristics(id)
+                    .get(CameraCharacteristics.FLASH_INFO_AVAILABLE) == true
+            } catch (e: CameraAccessException) {
+                e.printStackTrace()
+                false
+            } catch (e: IllegalArgumentException) {
+                // The id can vanish between cameraIdList and this query; skip it
+                e.printStackTrace()
+                false
+            }
+        }
     }
 
     override fun onCleared() {
+        // viewModelScope is already cancelled when this runs, so cleanup goes straight
+        // through the executor instead of a coroutine
         stopAll()
-        cameraManager?.unregisterTorchCallback(torchCallback)
+        torchExecutor.execute { cameraManager?.unregisterTorchCallback(torchCallback) }
+        // shutdown(): drains the queue, then the thread exits; never blocks this thread
+        torchDispatcher.close()
         super.onCleared()
     }
 }

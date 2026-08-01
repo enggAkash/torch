@@ -21,6 +21,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updateLayoutParams
+import androidx.lifecycle.lifecycleScope
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
@@ -28,20 +29,14 @@ import com.google.android.gms.ads.MobileAds
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.slider.Slider
 import com.google.android.material.tabs.TabLayout
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
     private val torchViewModel by viewModels<TorchViewModel>()
 
-    private val mainScope by lazy {
-        CoroutineScope(Dispatchers.Main)
-    }
-
-    private val backgroundScope by lazy {
-        CoroutineScope(Dispatchers.IO)
-    }
+    private var adView: AdView? = null
+    private var networkCallback: ConnectivityManager.NetworkCallback? = null
 
     /**
      * Anchored adaptive banner for a 360dp-wide slot. Resolved once per activity so the
@@ -113,16 +108,6 @@ class MainActivity : AppCompatActivity() {
         reserveAdSpace(adViewContainer)
 
         val connectivityManager = getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager
-        val networkRequest = NetworkRequest.Builder()
-            .addCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
-            .build()
-
-        val networkCallback = object : ConnectivityManager.NetworkCallback() {
-            override fun onAvailable(network: Network) {
-                // Network is available, load the ad
-                loadAd(adViewContainer)
-            }
-        }
 
         // Check current network state
         val activeNetwork = connectivityManager.activeNetwork
@@ -132,9 +117,33 @@ class MainActivity : AppCompatActivity() {
             // Internet is available, load the ad immediately
             loadAd(adViewContainer)
         } else {
-            // No internet, register callback to listen for connectivity changes
-            connectivityManager.registerNetworkCallback(networkRequest, networkCallback)
+            // No internet: wait for connectivity, once. The callback unregisters itself
+            // on first fire and again in onDestroy, so recreations can't accumulate
+            // registrations (100 per process throws TooManyRequestsException)
+            val callback = object : ConnectivityManager.NetworkCallback() {
+                override fun onAvailable(network: Network) {
+                    // Fires on a connectivity thread; lifecycleScope hops to main and is
+                    // cancelled at destroy, so a late network can't touch dead views
+                    lifecycleScope.launch {
+                        unregisterNetworkCallback()
+                        loadAd(adViewContainer)
+                    }
+                }
+            }
+            networkCallback = callback
+            val networkRequest = NetworkRequest.Builder()
+                .addCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
+                .build()
+            connectivityManager.registerNetworkCallback(networkRequest, callback)
         }
+    }
+
+    private fun unregisterNetworkCallback() {
+        val callback = networkCallback ?: return
+        // Null first: safe to reach from both onAvailable and onDestroy
+        networkCallback = null
+        (getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager)
+            .unregisterNetworkCallback(callback)
     }
 
     /**
@@ -148,26 +157,29 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /** Main thread only. */
     private fun loadAd(adViewContainer: FrameLayout) {
-        backgroundScope.launch {
+        if (isDestroyed || adView != null) return
+
+        lifecycleScope.launch(Dispatchers.IO) {
             // Initialize the Google Mobile Ads SDK on a background thread.
-            MobileAds.initialize(this@MainActivity) {}
+            // applicationContext so the SDK's init registry can't pin this activity.
+            MobileAds.initialize(applicationContext) {}
         }
 
-        mainScope.launch {
-            val adView = AdView(this@MainActivity)
-            // Test unit in debug, live unit in release. See app/build.gradle.kts
-            adView.adUnitId = BuildConfig.AD_UNIT_ID
+        val newAdView = AdView(this)
+        // Test unit in debug, live unit in release. See app/build.gradle.kts
+        newAdView.adUnitId = BuildConfig.AD_UNIT_ID
 
-            adView.setAdSize(adSize)
+        newAdView.setAdSize(adSize)
+        adView = newAdView
 
-            // Replace ad container with new ad view.
-            adViewContainer.removeAllViews()
-            adViewContainer.addView(adView)
+        // Replace ad container with new ad view.
+        adViewContainer.removeAllViews()
+        adViewContainer.addView(newAdView)
 
-            val adRequest = AdRequest.Builder().build()
-            adView.loadAd(adRequest)
-        }
+        val adRequest = AdRequest.Builder().build()
+        newAdView.loadAd(adRequest)
     }
 
     private fun setListeners() {
@@ -295,6 +307,16 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        adView?.resume()
+    }
+
+    override fun onPause() {
+        adView?.pause()
+        super.onPause()
+    }
+
     override fun onStop() {
         // The light keeps flashing in the background, but the pulse has nothing to draw there
         strobePulse.stop()
@@ -312,6 +334,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onDestroy() {
+        unregisterNetworkCallback()
+        adView?.destroy()
+        adView = null
 
         if (!isChangingConfigurations) {
             // user is closing the app, stop any light activity
