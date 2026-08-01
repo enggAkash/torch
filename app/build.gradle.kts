@@ -25,6 +25,12 @@ android {
         buildConfig = true
     }
 
+    androidResources {
+        // App strings are English-only; drop the ~80 locale variants that
+        // AppCompat/Material/Play Services would otherwise bundle.
+        localeFilters += "en"
+    }
+
     buildTypes {
         debug {
             // Google's sample banner unit — never serves live ads.
@@ -34,7 +40,8 @@ android {
         release {
             buildConfigField("String", "AD_UNIT_ID", "\"ca-app-pub-5354242864643274/8713292011\"")
 
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -72,5 +79,4 @@ dependencies {
     testImplementation(libs.junit)
 
     androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
 }

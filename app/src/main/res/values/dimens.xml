@@ -3,7 +3,6 @@
     <dimen name="screen_margin_horizontal">20dp</dimen>
     <dimen name="header_margin_top">16dp</dimen>
     <dimen name="tab_bar_corner_radius">10dp</dimen>
-    <dimen name="tab_bar_content_padding">4dp</dimen>
     <dimen name="tab_pill_corner_radius">10dp</dimen>
 
     <dimen name="illustration_size">200dp</dimen>
