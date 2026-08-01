@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="something_is_not_right">問題が発生しました</string>
+
+    <string name="share_app_message">🔦 スマホを本格的な懐中電灯に！\n\n私はTorchを使っています。ただ光るだけのアプリではありません：\n\n💡 ライト — ワンタップで瞬時にフル輝度の光\n🎉 ストロボ — 点滅速度を調整可能。コンサートに持って行き、スマホを掲げて注目を集めよう\n🆘 SOS — 助けが来るまで点滅し続ける自動モールス救難信号\n\n無料・軽量・登録不要。ダウンロードはこちら：\nhttps://play.google.com/store/apps/details?id=com.engineerakash.torch</string>
+    <string name="share_app_subject">Torch — ライト・ストロボ・SOSがひとつになったアプリ</string>
+    <string name="share_via">共有方法</string>
+
+    <string name="tab_torch">ライト</string>
+    <string name="tab_strobe">ストロボ</string>
+    <string name="tab_sos">SOS</string>
+
+    <string name="flashlight_is_on">ライトはオンです</string>
+    <string name="flashlight_is_off">ライトはオフです</string>
+    <string name="tap_to_turn_on">ボタンをタップして点灯</string>
+    <string name="tap_to_turn_off">ボタンをタップして消灯</string>
+    <string name="turn_on">オンにする</string>
+    <string name="turn_off">オフにする</string>
+
+    <string name="strobe_mode">ストロボモード</string>
+    <string name="strobe_caption">速度を調整して開始</string>
+    <string name="strobe_warning">点滅する光は、光過敏症の方に影響を与える可能性があります</string>
+    <string name="speed">速度</string>
+    <plurals name="flashes_per_sec">
+        <item quantity="other">毎秒 %d 回点滅</item>
+    </plurals>
+    <string name="start_strobe">ストロボ開始</string>
+    <string name="stop_strobe">ストロボ停止</string>
+
+    <string name="sos">SOS</string>
+    <string name="sos_mode">SOSモード</string>
+    <string name="sos_caption">緊急信号 (··· −−− ···)</string>
+    <string name="start_sos">SOS開始</string>
+    <string name="stop_sos">SOS停止</string>
+
+    <string name="flash_not_available">この端末ではフラッシュを利用できません</string>
+
+    <string name="cd_share_app">このアプリを共有</string>
+    <string name="cd_flashlight_illustration">ライトを切り替え</string>
+    <string name="cd_strobe_illustration">ストロボを切り替え</string>
+    <string name="cd_sos_illustration">SOSを切り替え</string>
+    <string name="cd_strobe_speed">ストロボの速度</string>
+</resources>

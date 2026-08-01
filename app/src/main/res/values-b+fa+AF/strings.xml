@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="something_is_not_right">مشکلی پیش آمده است</string>
+
+    <string name="share_app_message">🔦 تلیفون خود را به یک چراغ دستی واقعی تبدیل کنید!\n\nمن از Torch استفاده می‌کنم و این اپ خیلی بیشتر از روشن شدن کار می‌دهد:\n\n💡 TORCH — روشنایی فوری با درخشندگی کامل تنها با یک ضربه\n🎉 STROBE — سرعت چشمک قابل تنظیم. آن را به کنسرت ببرید، تلیفون‌تان را بلند کنید و از میان جمعیت متمایز شوید\n🆘 SOS — سیگنال خطر مورس اتوماتیک که تا رسیدن کمک چشمک می‌زند\n\nرایگان، دانلود کم‌حجم، بدون ثبت نام. از اینجا بگیرید:\nhttps://play.google.com/store/apps/details?id=com.engineerakash.torch</string>
+    <string name="share_app_subject">Torch — چراغ دستی، استروب و SOS در یک اپ</string>
+    <string name="share_via">شریک ساختن از طریق</string>
+
+    <string name="tab_torch">چراغ</string>
+    <string name="tab_strobe">استروب</string>
+    <string name="tab_sos">SOS</string>
+
+    <string name="flashlight_is_on">چراغ روشن است</string>
+    <string name="flashlight_is_off">چراغ خاموش است</string>
+    <string name="tap_to_turn_on">برای روشن کردن دکمه را بزنید</string>
+    <string name="tap_to_turn_off">برای خاموش کردن دکمه را بزنید</string>
+    <string name="turn_on">روشن کردن</string>
+    <string name="turn_off">خاموش کردن</string>
+
+    <string name="strobe_mode">حالت استروب</string>
+    <string name="strobe_caption">سرعت را تنظیم و شروع کنید</string>
+    <string name="strobe_warning">نورهای چشمک‌زن ممکن است بر افراد حساس به نور تأثیر بگذارد</string>
+    <string name="speed">سرعت</string>
+    <plurals name="flashes_per_sec">
+        <item quantity="one">%d چشمک در ثانیه</item>
+        <item quantity="other">%d چشمک در ثانیه</item>
+    </plurals>
+    <string name="start_strobe">شروع استروب</string>
+    <string name="stop_strobe">توقف استروب</string>
+
+    <string name="sos">SOS</string>
+    <string name="sos_mode">حالت SOS</string>
+    <string name="sos_caption">سیگنال اضطراری (··· −−− ···)</string>
+    <string name="start_sos">شروع SOS</string>
+    <string name="stop_sos">توقف SOS</string>
+
+    <string name="flash_not_available">فلش در این دستگاه موجود نیست</string>
+
+    <string name="cd_share_app">شریک ساختن این اپ</string>
+    <string name="cd_flashlight_illustration">روشن/خاموش کردن چراغ</string>
+    <string name="cd_strobe_illustration">روشن/خاموش کردن استروب</string>
+    <string name="cd_sos_illustration">روشن/خاموش کردن SOS</string>
+    <string name="cd_strobe_speed">سرعت استروب</string>
+</resources>

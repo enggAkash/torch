@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="something_is_not_right">هناك خطأ ما</string>
+
+    <string name="share_app_message">🔦 حوِّل هاتفك إلى كشاف حقيقي!\n\nأنا أستخدم تطبيق Torch وهو يفعل أكثر بكثير من مجرد الإضاءة:\n\n💡 المصباح — إضاءة فورية بأقصى سطوع بلمسة واحدة\n🎉 الوميض — سرعة وميض قابلة للضبط. خذه معك إلى الحفلات الموسيقية، ارفع هاتفك وتميَّز عن الحشد\n🆘 SOS — إشارة استغاثة تلقائية بشفرة مورس تستمر في الوميض حتى وصول المساعدة\n\nمجاني، حجمه صغير، وبدون تسجيل. حمِّله من هنا:\nhttps://play.google.com/store/apps/details?id=com.engineerakash.torch</string>
+    <string name="share_app_subject">Torch — مصباح ووميض وSOS في تطبيق واحد</string>
+    <string name="share_via">المشاركة عبر</string>
+
+    <string name="tab_torch">المصباح</string>
+    <string name="tab_strobe">الوميض</string>
+    <string name="tab_sos">SOS</string>
+
+    <string name="flashlight_is_on">المصباح مضاء</string>
+    <string name="flashlight_is_off">المصباح مطفأ</string>
+    <string name="tap_to_turn_on">اضغط على الزر للتشغيل</string>
+    <string name="tap_to_turn_off">اضغط على الزر للإيقاف</string>
+    <string name="turn_on">تشغيل</string>
+    <string name="turn_off">إيقاف</string>
+
+    <string name="strobe_mode">وضع الوميض</string>
+    <string name="strobe_caption">اضبط السرعة وابدأ</string>
+    <string name="strobe_warning">قد تؤثر الأضواء الوامضة على المستخدمين ذوي الحساسية للضوء</string>
+    <string name="speed">السرعة</string>
+    <plurals name="flashes_per_sec">
+        <item quantity="zero">%d ومضة / ثانية</item>
+        <item quantity="one">%d ومضة / ثانية</item>
+        <item quantity="two">%d ومضة / ثانية</item>
+        <item quantity="few">%d ومضات / ثانية</item>
+        <item quantity="many">%d ومضة / ثانية</item>
+        <item quantity="other">%d ومضة / ثانية</item>
+    </plurals>
+    <string name="start_strobe">بدء الوميض</string>
+    <string name="stop_strobe">إيقاف الوميض</string>
+
+    <string name="sos">SOS</string>
+    <string name="sos_mode">وضع SOS</string>
+    <string name="sos_caption">إشارة طوارئ (··· −−− ···)</string>
+    <string name="start_sos">بدء SOS</string>
+    <string name="stop_sos">إيقاف SOS</string>
+
+    <string name="flash_not_available">الفلاش غير متوفر على هذا الجهاز</string>
+
+    <string name="cd_share_app">مشاركة هذا التطبيق</string>
+    <string name="cd_flashlight_illustration">تشغيل/إيقاف المصباح</string>
+    <string name="cd_strobe_illustration">تشغيل/إيقاف الوميض</string>
+    <string name="cd_sos_illustration">تشغيل/إيقاف SOS</string>
+    <string name="cd_strobe_speed">سرعة الوميض</string>
+</resources>

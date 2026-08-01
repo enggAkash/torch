@@ -26,9 +26,18 @@ android {
     }
 
     androidResources {
-        // App strings are English-only; drop the ~80 locale variants that
-        // AppCompat/Material/Play Services would otherwise bundle.
-        localeFilters += "en"
+        // Whitelist of shipped locales; also keeps AppCompat/Material/Play Services
+        // resources limited to these instead of their ~80 locale variants. Every
+        // values-* folder needs a matching entry here or aapt2 silently strips it.
+        localeFilters += listOf(
+            "en", "it", "de", "fr", "es", "nl", "ru", "ja", "b+zh+Hans", "ar",
+            "hi", "bn", "gu", "mr", "pa", "ta", "te", "kn", "ml", "ur",
+            "sw", "af", "zu", "xh", "ha", "ms", "b+fil", "my",
+            "ps", "b+fa+AF", "ku", "b+ckb",
+        )
+        // Emits android:localeConfig from the locales above so Android 13+ offers
+        // the app's languages in the system per-app language setting.
+        generateLocaleConfig = true
     }
 
     buildTypes {
@@ -36,6 +45,9 @@ android {
             // Google's sample banner unit — never serves live ads.
             // https://developers.google.com/admob/android/test-ads
             buildConfigField("String", "AD_UNIT_ID", "\"ca-app-pub-3940256099942544/6300978111\"")
+
+            // en-XA/ar-XB test locales for text-expansion and RTL smoke tests
+            isPseudoLocalesEnabled = true
         }
         release {
             buildConfigField("String", "AD_UNIT_ID", "\"ca-app-pub-5354242864643274/8713292011\"")

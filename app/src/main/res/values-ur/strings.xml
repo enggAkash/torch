@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="something_is_not_right">کچھ گڑبڑ ہے</string>
+
+    <string name="share_app_message">🔦 اپنے فون کو ایک زبردست فلیش لائٹ بنائیں!\n\nمیں Torch استعمال کر رہا ہوں اور یہ صرف روشنی دینے سے کہیں بڑھ کر کام کرتی ہے:\n\n💡 ٹارچ — ایک ٹیپ پر فوری، پوری چمک والی روشنی\n🎉 اسٹروب — ایڈجسٹ ہونے والی فلیش رفتار۔ کنسرٹ میں لے جائیں، اپنا فون اونچا کریں اور بھیڑ میں نمایاں ہو جائیں\n🆘 SOS — خودکار مورس ڈسٹریس سگنل جو مدد پہنچنے تک جھپکتا رہتا ہے\n\nمفت، بہت چھوٹا ڈاؤن لوڈ، کوئی سائن اپ نہیں۔ یہاں سے حاصل کریں:\nhttps://play.google.com/store/apps/details?id=com.engineerakash.torch</string>
+    <string name="share_app_subject">Torch — فلیش لائٹ، اسٹروب اور SOS ایک ہی ایپ میں</string>
+    <string name="share_via">اس کے ذریعے شیئر کریں</string>
+
+    <string name="tab_torch">ٹارچ</string>
+    <string name="tab_strobe">اسٹروب</string>
+    <string name="tab_sos">SOS</string>
+
+    <string name="flashlight_is_on">فلیش لائٹ آن ہے</string>
+    <string name="flashlight_is_off">فلیش لائٹ آف ہے</string>
+    <string name="tap_to_turn_on">آن کرنے کے لیے بٹن پر ٹیپ کریں</string>
+    <string name="tap_to_turn_off">آف کرنے کے لیے بٹن پر ٹیپ کریں</string>
+    <string name="turn_on">آن کریں</string>
+    <string name="turn_off">آف کریں</string>
+
+    <string name="strobe_mode">اسٹروب موڈ</string>
+    <string name="strobe_caption">رفتار ایڈجسٹ کریں اور شروع کریں</string>
+    <string name="strobe_warning">جھپکتی روشنیاں روشنی سے حساس صارفین کو متاثر کر سکتی ہیں</string>
+    <string name="speed">رفتار</string>
+    <plurals name="flashes_per_sec">
+        <item quantity="one">%d فلیش / سیکنڈ</item>
+        <item quantity="other">%d فلیشز / سیکنڈ</item>
+    </plurals>
+    <string name="start_strobe">اسٹروب شروع کریں</string>
+    <string name="stop_strobe">اسٹروب بند کریں</string>
+
+    <string name="sos">SOS</string>
+    <string name="sos_mode">SOS موڈ</string>
+    <string name="sos_caption">ہنگامی سگنل (··· −−− ···)</string>
+    <string name="start_sos">SOS شروع کریں</string>
+    <string name="stop_sos">SOS بند کریں</string>
+
+    <string name="flash_not_available">اس ڈیوائس پر فلیش دستیاب نہیں ہے</string>
+
+    <string name="cd_share_app">یہ ایپ شیئر کریں</string>
+    <string name="cd_flashlight_illustration">فلیش لائٹ آن/آف کریں</string>
+    <string name="cd_strobe_illustration">اسٹروب آن/آف کریں</string>
+    <string name="cd_sos_illustration">SOS آن/آف کریں</string>
+    <string name="cd_strobe_speed">اسٹروب کی رفتار</string>
+</resources>

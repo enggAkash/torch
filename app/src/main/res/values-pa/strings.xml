@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="something_is_not_right">ਕੁਝ ਗੜਬੜ ਹੈ</string>
+
+    <string name="share_app_message">🔦 ਆਪਣੇ ਫ਼ੋਨ ਨੂੰ ਇੱਕ ਸ਼ਾਨਦਾਰ ਫਲੈਸ਼ਲਾਈਟ ਬਣਾਓ!\n\nਮੈਂ Torch ਵਰਤ ਰਿਹਾ ਹਾਂ ਅਤੇ ਇਹ ਸਿਰਫ਼ ਰੋਸ਼ਨੀ ਦੇਣ ਤੋਂ ਕਿਤੇ ਵੱਧ ਕੰਮ ਕਰਦੀ ਹੈ:\n\n💡 ਟਾਰਚ — ਇੱਕ ਟੈਪ ਨਾਲ ਤੁਰੰਤ, ਪੂਰੀ ਚਮਕ ਵਾਲੀ ਰੋਸ਼ਨੀ\n🎉 ਸਟ੍ਰੋਬ — ਅਡਜਸਟ ਹੋਣ ਵਾਲੀ ਫਲੈਸ਼ ਸਪੀਡ। ਕੰਸਰਟ ਵਿੱਚ ਲੈ ਜਾਓ, ਆਪਣਾ ਫ਼ੋਨ ਉੱਚਾ ਚੁੱਕੋ ਅਤੇ ਭੀੜ ਵਿੱਚ ਵੱਖਰੇ ਨਜ਼ਰ ਆਓ\n🆘 SOS — ਆਪਣੇ ਆਪ ਚੱਲਣ ਵਾਲਾ ਮੋਰਸ ਸੰਕਟ ਸਿਗਨਲ ਜੋ ਮਦਦ ਪਹੁੰਚਣ ਤੱਕ ਝਪਕਦਾ ਰਹਿੰਦਾ ਹੈ\n\nਮੁਫ਼ਤ, ਬਹੁਤ ਛੋਟਾ ਡਾਊਨਲੋਡ, ਕੋਈ ਸਾਈਨ-ਅੱਪ ਨਹੀਂ। ਇੱਥੋਂ ਲਵੋ:\nhttps://play.google.com/store/apps/details?id=com.engineerakash.torch</string>
+    <string name="share_app_subject">Torch — ਫਲੈਸ਼ਲਾਈਟ, ਸਟ੍ਰੋਬ ਅਤੇ SOS ਇੱਕੋ ਐਪ ਵਿੱਚ</string>
+    <string name="share_via">ਇਸ ਰਾਹੀਂ ਸਾਂਝਾ ਕਰੋ</string>
+
+    <string name="tab_torch">ਟਾਰਚ</string>
+    <string name="tab_strobe">ਸਟ੍ਰੋਬ</string>
+    <string name="tab_sos">SOS</string>
+
+    <string name="flashlight_is_on">ਫਲੈਸ਼ਲਾਈਟ ਚਾਲੂ ਹੈ</string>
+    <string name="flashlight_is_off">ਫਲੈਸ਼ਲਾਈਟ ਬੰਦ ਹੈ</string>
+    <string name="tap_to_turn_on">ਚਾਲੂ ਕਰਨ ਲਈ ਬਟਨ \'ਤੇ ਟੈਪ ਕਰੋ</string>
+    <string name="tap_to_turn_off">ਬੰਦ ਕਰਨ ਲਈ ਬਟਨ \'ਤੇ ਟੈਪ ਕਰੋ</string>
+    <string name="turn_on">ਚਾਲੂ ਕਰੋ</string>
+    <string name="turn_off">ਬੰਦ ਕਰੋ</string>
+
+    <string name="strobe_mode">ਸਟ੍ਰੋਬ ਮੋਡ</string>
+    <string name="strobe_caption">ਸਪੀਡ ਅਡਜਸਟ ਕਰੋ ਅਤੇ ਸ਼ੁਰੂ ਕਰੋ</string>
+    <string name="strobe_warning">ਝਪਕਦੀਆਂ ਲਾਈਟਾਂ ਰੋਸ਼ਨੀ ਪ੍ਰਤੀ ਸੰਵੇਦਨਸ਼ੀਲ ਵਰਤੋਂਕਾਰਾਂ ਨੂੰ ਪ੍ਰਭਾਵਿਤ ਕਰ ਸਕਦੀਆਂ ਹਨ</string>
+    <string name="speed">ਸਪੀਡ</string>
+    <plurals name="flashes_per_sec">
+        <item quantity="one">%d ਫਲੈਸ਼ / ਸਕਿੰਟ</item>
+        <item quantity="other">%d ਫਲੈਸ਼ਾਂ / ਸਕਿੰਟ</item>
+    </plurals>
+    <string name="start_strobe">ਸਟ੍ਰੋਬ ਸ਼ੁਰੂ ਕਰੋ</string>
+    <string name="stop_strobe">ਸਟ੍ਰੋਬ ਬੰਦ ਕਰੋ</string>
+
+    <string name="sos">SOS</string>
+    <string name="sos_mode">SOS ਮੋਡ</string>
+    <string name="sos_caption">ਐਮਰਜੈਂਸੀ ਸਿਗਨਲ (··· −−− ···)</string>
+    <string name="start_sos">SOS ਸ਼ੁਰੂ ਕਰੋ</string>
+    <string name="stop_sos">SOS ਬੰਦ ਕਰੋ</string>
+
+    <string name="flash_not_available">ਇਸ ਡੀਵਾਈਸ \'ਤੇ ਫਲੈਸ਼ ਉਪਲਬਧ ਨਹੀਂ ਹੈ</string>
+
+    <string name="cd_share_app">ਇਹ ਐਪ ਸਾਂਝੀ ਕਰੋ</string>
+    <string name="cd_flashlight_illustration">ਫਲੈਸ਼ਲਾਈਟ ਚਾਲੂ/ਬੰਦ ਕਰੋ</string>
+    <string name="cd_strobe_illustration">ਸਟ੍ਰੋਬ ਚਾਲੂ/ਬੰਦ ਕਰੋ</string>
+    <string name="cd_sos_illustration">SOS ਚਾਲੂ/ਬੰਦ ਕਰੋ</string>
+    <string name="cd_strobe_speed">ਸਟ੍ਰੋਬ ਦੀ ਸਪੀਡ</string>
+</resources>

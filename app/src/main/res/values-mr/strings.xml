@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="something_is_not_right">काहीतरी गडबड आहे</string>
+
+    <string name="share_app_message">🔦 तुमच्या फोनला खरा फ्लॅशलाइट बनवा!\n\nमाझ्या फोनवर Torch आहे आणि तो फक्त उजेड देण्यापेक्षा खूप काही करतो:\n\n💡 टॉर्च — एका टॅपमध्ये झटपट, पूर्ण ब्राइटनेसचा प्रकाश\n🎉 स्ट्रोब — फ्लॅशचा वेग हवा तसा सेट करा. कॉन्सर्टला घेऊन जा, फोन उंच धरा आणि गर्दीत उठून दिसा\n🆘 SOS — आपोआप चालणारा मोर्स संकट सिग्नल, मदत येईपर्यंत फ्लॅश होत राहतो\n\nमोफत, छोटा डाउनलोड, साइन-अप नाही. इथून घ्या:\nhttps://play.google.com/store/apps/details?id=com.engineerakash.torch</string>
+    <string name="share_app_subject">Torch — फ्लॅशलाइट, स्ट्रोब आणि SOS एकाच ॲपमध्ये</string>
+    <string name="share_via">याद्वारे शेअर करा</string>
+
+    <string name="tab_torch">टॉर्च</string>
+    <string name="tab_strobe">स्ट्रोब</string>
+    <string name="tab_sos">SOS</string>
+
+    <string name="flashlight_is_on">फ्लॅशलाइट सुरू आहे</string>
+    <string name="flashlight_is_off">फ्लॅशलाइट बंद आहे</string>
+    <string name="tap_to_turn_on">सुरू करण्यासाठी बटण टॅप करा</string>
+    <string name="tap_to_turn_off">बंद करण्यासाठी बटण टॅप करा</string>
+    <string name="turn_on">सुरू करा</string>
+    <string name="turn_off">बंद करा</string>
+
+    <string name="strobe_mode">स्ट्रोब मोड</string>
+    <string name="strobe_caption">वेग सेट करा आणि सुरू करा</string>
+    <string name="strobe_warning">चमकणारे दिवे प्रकाश-संवेदनशील वापरकर्त्यांवर परिणाम करू शकतात</string>
+    <string name="speed">वेग</string>
+    <plurals name="flashes_per_sec">
+        <item quantity="one">%d फ्लॅश / सेकंद</item>
+        <item quantity="other">%d फ्लॅश / सेकंद</item>
+    </plurals>
+    <string name="start_strobe">स्ट्रोब सुरू करा</string>
+    <string name="stop_strobe">स्ट्रोब बंद करा</string>
+
+    <string name="sos">SOS</string>
+    <string name="sos_mode">SOS मोड</string>
+    <string name="sos_caption">आपत्कालीन सिग्नल (··· −−− ···)</string>
+    <string name="start_sos">SOS सुरू करा</string>
+    <string name="stop_sos">SOS बंद करा</string>
+
+    <string name="flash_not_available">या डिव्हाइसवर फ्लॅश उपलब्ध नाही</string>
+
+    <string name="cd_share_app">हे ॲप शेअर करा</string>
+    <string name="cd_flashlight_illustration">फ्लॅशलाइट टॉगल करा</string>
+    <string name="cd_strobe_illustration">स्ट्रोब टॉगल करा</string>
+    <string name="cd_sos_illustration">SOS टॉगल करा</string>
+    <string name="cd_strobe_speed">स्ट्रोबचा वेग</string>
+</resources>

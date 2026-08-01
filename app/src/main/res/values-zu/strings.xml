@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="something_is_not_right">Kukhona okungalungile</string>
+
+    <string name="share_app_message">🔦 Guqula ifoni yakho ibe yithoshi langempela!\n\nNgisebenzisa i-Torch futhi yenza okuningi ngaphezu kokukhanya nje:\n\n💡 ITHOSHI — ukukhanya okugcwele ngokushesha ngokuthepha kanye\n🎉 I-STROBE — isivinini sokubhanyaza esilungisekayo. Yiphathe emcimbini womculo, phakamisa ifoni yakho ugqame esixukwini\n🆘 SOS — isignali yosizo ye-Morse ezenzakalelayo eqhubeka ibhanyaza kuze kufike usizo\n\nMahhala, ukulanda okuncane, akudingeki ukubhalisa. Yithole lapha:\nhttps://play.google.com/store/apps/details?id=com.engineerakash.torch</string>
+    <string name="share_app_subject">Torch — ithoshi, i-strobe ne-SOS ku-app eyodwa</string>
+    <string name="share_via">Yabelana usebenzisa</string>
+
+    <string name="tab_torch">Ithoshi</string>
+    <string name="tab_strobe">I-Strobe</string>
+    <string name="tab_sos">SOS</string>
+
+    <string name="flashlight_is_on">Ithoshi LIVULIWE</string>
+    <string name="flashlight_is_off">Ithoshi LICISHIWE</string>
+    <string name="tap_to_turn_on">Thepha inkinobho ukuze uvule</string>
+    <string name="tap_to_turn_off">Thepha inkinobho ukuze ucishe</string>
+    <string name="turn_on">Vula</string>
+    <string name="turn_off">Cisha</string>
+
+    <string name="strobe_mode">Imodi ye-Strobe</string>
+    <string name="strobe_caption">Lungisa isivinini bese uqala</string>
+    <string name="strobe_warning">Izibani ezibhanyazayo zingase zithinte abasebenzisi abazwela ukukhanya</string>
+    <string name="speed">Isivinini</string>
+    <plurals name="flashes_per_sec">
+        <item quantity="one">Ukubhanyaza okungu-%d ngomzuzwana</item>
+        <item quantity="other">Ukubhanyaza okungu-%d ngomzuzwana</item>
+    </plurals>
+    <string name="start_strobe">Qala i-Strobe</string>
+    <string name="stop_strobe">Misa i-Strobe</string>
+
+    <string name="sos">SOS</string>
+    <string name="sos_mode">Imodi ye-SOS</string>
+    <string name="sos_caption">Isignali yesimo esiphuthumayo (··· −−− ···)</string>
+    <string name="start_sos">Qala i-SOS</string>
+    <string name="stop_sos">Misa i-SOS</string>
+
+    <string name="flash_not_available">Ifuleshi alitholakali kule divayisi</string>
+
+    <string name="cd_share_app">Yabelana ngalolu hlelo lokusebenza</string>
+    <string name="cd_flashlight_illustration">Vula noma ucishe ithoshi</string>
+    <string name="cd_strobe_illustration">Vula noma ucishe i-strobe</string>
+    <string name="cd_sos_illustration">Vula noma ucishe i-SOS</string>
+    <string name="cd_strobe_speed">Isivinini se-strobe</string>
+</resources>
