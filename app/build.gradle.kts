@@ -15,8 +15,8 @@ android {
         applicationId = "com.engineerakash.torch"
         minSdk = 23
         targetSdk = 36
-        versionCode = 5
-        versionName = "1.4"
+        versionCode = 7
+        versionName = "2.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -60,6 +60,16 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+
+            // Embeds native symbol tables in the AAB so Play can symbolicate native
+            // crashes/ANRs. Currently inert: the app's only native lib
+            // (libdatastore_shared_counter.so, via play-services-ads and Firebase)
+            // ships pre-stripped, so Play's "no debug symbols" warning is
+            // unavoidable and safe to ignore. Upload-only metadata either way —
+            // never affects the size users download.
+            ndk {
+                debugSymbolLevel = "SYMBOL_TABLE"
+            }
         }
     }
     compileOptions {
