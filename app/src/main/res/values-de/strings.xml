@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="something_is_not_right">Etwas stimmt nicht</string>
+
+    <string name="share_app_message">🔦 Mach aus deinem Handy eine richtige Taschenlampe!\n\nIch nutze Torch, und die App kann weit mehr als nur leuchten:\n\n💡 TASCHENLAMPE — sofort volles Licht mit einem einzigen Tipp\n🎉 STROBO — einstellbare Blitzfrequenz. Nimm sie mit aufs Konzert, halte dein Handy hoch und heb dich von der Menge ab\n🆘 SOS — automatisches Morse-Notsignal, das so lange blinkt, bis Hilfe eintrifft\n\nKostenlos, winziger Download, keine Anmeldung. Hol dir die App hier:\nhttps://play.google.com/store/apps/details?id=com.engineerakash.torch</string>
+    <string name="share_app_subject">Torch — Taschenlampe, Stroboskop und SOS in einer App</string>
+    <string name="share_via">Teilen über</string>
+
+    <string name="tab_torch">Lampe</string>
+    <string name="tab_strobe">Strobo</string>
+    <string name="tab_sos">SOS</string>
+
+    <string name="flashlight_is_on">Taschenlampe ist AN</string>
+    <string name="flashlight_is_off">Taschenlampe ist AUS</string>
+    <string name="tap_to_turn_on">Tippe zum Einschalten auf den Button</string>
+    <string name="tap_to_turn_off">Tippe zum Ausschalten auf den Button</string>
+    <string name="turn_on">Einschalten</string>
+    <string name="turn_off">Ausschalten</string>
+
+    <string name="strobe_mode">Stroboskop-Modus</string>
+    <string name="strobe_caption">Geschwindigkeit anpassen und starten</string>
+    <string name="strobe_warning">Blinkende Lichter können lichtempfindliche Nutzer beeinträchtigen</string>
+    <string name="speed">Geschwindigkeit</string>
+    <plurals name="flashes_per_sec">
+        <item quantity="one">%d Blitz / Sek.</item>
+        <item quantity="other">%d Blitze / Sek.</item>
+    </plurals>
+    <string name="start_strobe">Strobo starten</string>
+    <string name="stop_strobe">Strobo stoppen</string>
+
+    <string name="sos">SOS</string>
+    <string name="sos_mode">SOS-Modus</string>
+    <string name="sos_caption">Notsignal (··· −−− ···)</string>
+    <string name="start_sos">SOS starten</string>
+    <string name="stop_sos">SOS stoppen</string>
+
+    <string name="flash_not_available">Der Blitz ist auf diesem Gerät nicht verfügbar</string>
+
+    <string name="cd_share_app">Diese App teilen</string>
+    <string name="cd_flashlight_illustration">Taschenlampe umschalten</string>
+    <string name="cd_strobe_illustration">Stroboskop umschalten</string>
+    <string name="cd_sos_illustration">SOS umschalten</string>
+    <string name="cd_strobe_speed">Stroboskop-Geschwindigkeit</string>
+</resources>

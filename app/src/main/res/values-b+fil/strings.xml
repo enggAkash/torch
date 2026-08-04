@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="something_is_not_right">May hindi tama</string>
+
+    <string name="share_app_message">🔦 Gawing tunay na flashlight ang iyong phone!\n\nGinagamit ko ang Torch at higit pa ito sa basta pag-ilaw:\n\n💡 TORCH — instant na full-brightness na ilaw sa isang tap lang\n🎉 STROBE — naa-adjust na bilis ng flash. Dalhin ito sa concert, itaas ang iyong phone at mag-stand out sa crowd\n🆘 SOS — awtomatikong Morse distress signal na patuloy na kumikislap hanggang dumating ang tulong\n\nLibre, maliit na download, walang sign-up. Kunin ito rito:\nhttps://play.google.com/store/apps/details?id=com.engineerakash.torch</string>
+    <string name="share_app_subject">Torch — flashlight, strobe at SOS sa iisang app</string>
+    <string name="share_via">Ibahagi sa pamamagitan ng</string>
+
+    <string name="tab_torch">Torch</string>
+    <string name="tab_strobe">Strobe</string>
+    <string name="tab_sos">SOS</string>
+
+    <string name="flashlight_is_on">NAKA-ON ang flashlight</string>
+    <string name="flashlight_is_off">NAKA-OFF ang flashlight</string>
+    <string name="tap_to_turn_on">I-tap ang button para i-on</string>
+    <string name="tap_to_turn_off">I-tap ang button para i-off</string>
+    <string name="turn_on">I-on</string>
+    <string name="turn_off">I-off</string>
+
+    <string name="strobe_mode">Strobe Mode</string>
+    <string name="strobe_caption">I-adjust ang bilis at magsimula</string>
+    <string name="strobe_warning">Ang kumikislap na ilaw ay maaaring makaapekto sa mga user na sensitibo sa liwanag</string>
+    <string name="speed">Bilis</string>
+    <plurals name="flashes_per_sec">
+        <item quantity="one">%d kislap / segundo</item>
+        <item quantity="other">%d na kislap / segundo</item>
+    </plurals>
+    <string name="start_strobe">Simulan ang Strobe</string>
+    <string name="stop_strobe">Ihinto ang Strobe</string>
+
+    <string name="sos">SOS</string>
+    <string name="sos_mode">SOS Mode</string>
+    <string name="sos_caption">Signal pang-emergency (··· −−− ···)</string>
+    <string name="start_sos">Simulan ang SOS</string>
+    <string name="stop_sos">Ihinto ang SOS</string>
+
+    <string name="flash_not_available">Hindi available ang flash sa device na ito</string>
+
+    <string name="cd_share_app">Ibahagi ang app na ito</string>
+    <string name="cd_flashlight_illustration">I-toggle ang flashlight</string>
+    <string name="cd_strobe_illustration">I-toggle ang strobe</string>
+    <string name="cd_sos_illustration">I-toggle ang SOS</string>
+    <string name="cd_strobe_speed">Bilis ng strobe</string>
+</resources>

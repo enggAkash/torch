@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="something_is_not_right">എന്തോ ശരിയല്ല</string>
+
+    <string name="share_app_message">🔦 നിങ്ങളുടെ ഫോൺ ഒരു ശരിക്കുള്ള ഫ്ലാഷ്‌ലൈറ്റാക്കി മാറ്റൂ!\n\nഞാൻ Torch ഉപയോഗിക്കുന്നു, ഇത് വെറുതെ പ്രകാശിക്കുക മാത്രമല്ല ചെയ്യുന്നത്:\n\n💡 ടോർച്ച് — ഒറ്റ ടാപ്പിൽ ഉടനടി, പൂർണ്ണ തെളിച്ചമുള്ള വെളിച്ചം\n🎉 സ്ട്രോബ് — ക്രമീകരിക്കാവുന്ന ഫ്ലാഷ് വേഗത. കൺസേർട്ടിലേക്ക് കൊണ്ടുപോയി, ഫോൺ ഉയർത്തി ആൾക്കൂട്ടത്തിൽ വേറിട്ടു നിൽക്കൂ\n🆘 SOS — സഹായം എത്തുന്നതുവരെ മിന്നിക്കൊണ്ടിരിക്കുന്ന ഓട്ടോമാറ്റിക് മോഴ്‌സ് അപായ സിഗ്നൽ\n\nസൗജന്യം, ചെറിയ ഡൗൺലോഡ്, സൈൻ-അപ്പ് വേണ്ട. ഇവിടെ നിന്ന് നേടൂ:\nhttps://play.google.com/store/apps/details?id=com.engineerakash.torch</string>
+    <string name="share_app_subject">Torch — ഫ്ലാഷ്‌ലൈറ്റ്, സ്ട്രോബ്, SOS എല്ലാം ഒരു ആപ്പിൽ</string>
+    <string name="share_via">ഇതുവഴി പങ്കിടുക</string>
+
+    <string name="tab_torch">ടോർച്ച്</string>
+    <string name="tab_strobe">മിന്നൽ</string>
+    <string name="tab_sos">SOS</string>
+
+    <string name="flashlight_is_on">ഫ്ലാഷ്‌ലൈറ്റ് ഓണാണ്</string>
+    <string name="flashlight_is_off">ഫ്ലാഷ്‌ലൈറ്റ് ഓഫാണ്</string>
+    <string name="tap_to_turn_on">ഓൺ ചെയ്യാൻ ബട്ടൺ ടാപ്പ് ചെയ്യുക</string>
+    <string name="tap_to_turn_off">ഓഫ് ചെയ്യാൻ ബട്ടൺ ടാപ്പ് ചെയ്യുക</string>
+    <string name="turn_on">ഓൺ ചെയ്യുക</string>
+    <string name="turn_off">ഓഫ് ചെയ്യുക</string>
+
+    <string name="strobe_mode">സ്ട്രോബ് മോഡ്</string>
+    <string name="strobe_caption">വേഗത ക്രമീകരിച്ച് ആരംഭിക്കുക</string>
+    <string name="strobe_warning">മിന്നുന്ന ലൈറ്റുകൾ പ്രകാശത്തോട് സംവേദനക്ഷമതയുള്ളവരെ ബാധിച്ചേക്കാം</string>
+    <string name="speed">വേഗത</string>
+    <plurals name="flashes_per_sec">
+        <item quantity="one">%d ഫ്ലാഷ് / സെക്കൻഡ്</item>
+        <item quantity="other">%d ഫ്ലാഷുകൾ / സെക്കൻഡ്</item>
+    </plurals>
+    <string name="start_strobe">സ്ട്രോബ് തുടങ്ങുക</string>
+    <string name="stop_strobe">സ്ട്രോബ് നിർത്തുക</string>
+
+    <string name="sos">SOS</string>
+    <string name="sos_mode">SOS മോഡ്</string>
+    <string name="sos_caption">അടിയന്തര സിഗ്നൽ (··· −−− ···)</string>
+    <string name="start_sos">SOS തുടങ്ങുക</string>
+    <string name="stop_sos">SOS നിർത്തുക</string>
+
+    <string name="flash_not_available">ഈ ഉപകരണത്തിൽ ഫ്ലാഷ് ലഭ്യമല്ല</string>
+
+    <string name="cd_share_app">ഈ ആപ്പ് പങ്കിടുക</string>
+    <string name="cd_flashlight_illustration">ഫ്ലാഷ്‌ലൈറ്റ് ടോഗിൾ ചെയ്യുക</string>
+    <string name="cd_strobe_illustration">സ്ട്രോബ് ടോഗിൾ ചെയ്യുക</string>
+    <string name="cd_sos_illustration">SOS ടോഗിൾ ചെയ്യുക</string>
+    <string name="cd_strobe_speed">സ്ട്രോബ് വേഗത</string>
+</resources>

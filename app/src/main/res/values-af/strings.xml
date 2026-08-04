@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="something_is_not_right">Iets is nie reg nie</string>
+
+    <string name="share_app_message">🔦 Verander jou foon in \'n regte flitslig!\n\nEk gebruik Torch en dit doen baie meer as net skyn:\n\n💡 FLITSLIG — onmiddellike, helder lig met een tik\n🎉 STROBE — verstelbare flitsspoed. Vat dit saam konsert toe, lig jou foon en staan uit tussen die skare\n🆘 SOS — outomatiese Morse-noodsein wat aanhou flits totdat hulp opdaag\n\nGratis, klein aflaai, geen registrasie nie. Kry dit hier:\nhttps://play.google.com/store/apps/details?id=com.engineerakash.torch</string>
+    <string name="share_app_subject">Torch — flitslig, strobe en SOS in een app</string>
+    <string name="share_via">Deel via</string>
+
+    <string name="tab_torch">Flitslig</string>
+    <string name="tab_strobe">Strobe</string>
+    <string name="tab_sos">SOS</string>
+
+    <string name="flashlight_is_on">Flitslig is AAN</string>
+    <string name="flashlight_is_off">Flitslig is AF</string>
+    <string name="tap_to_turn_on">Tik die knoppie om aan te skakel</string>
+    <string name="tap_to_turn_off">Tik die knoppie om af te skakel</string>
+    <string name="turn_on">Skakel aan</string>
+    <string name="turn_off">Skakel af</string>
+
+    <string name="strobe_mode">Strobe-modus</string>
+    <string name="strobe_caption">Stel spoed en begin</string>
+    <string name="strobe_warning">Flitsende ligte kan fotosensitiewe gebruikers beïnvloed</string>
+    <string name="speed">Spoed</string>
+    <plurals name="flashes_per_sec">
+        <item quantity="one">%d flits / sek</item>
+        <item quantity="other">%d flitse / sek</item>
+    </plurals>
+    <string name="start_strobe">Begin strobe</string>
+    <string name="stop_strobe">Stop strobe</string>
+
+    <string name="sos">SOS</string>
+    <string name="sos_mode">SOS-modus</string>
+    <string name="sos_caption">Noodsein (··· −−− ···)</string>
+    <string name="start_sos">Begin SOS</string>
+    <string name="stop_sos">Stop SOS</string>
+
+    <string name="flash_not_available">Flits is nie op hierdie toestel beskikbaar nie</string>
+
+    <string name="cd_share_app">Deel hierdie app</string>
+    <string name="cd_flashlight_illustration">Skakel flitslig aan of af</string>
+    <string name="cd_strobe_illustration">Skakel strobe aan of af</string>
+    <string name="cd_sos_illustration">Skakel SOS aan of af</string>
+    <string name="cd_strobe_speed">Strobe-spoed</string>
+</resources>

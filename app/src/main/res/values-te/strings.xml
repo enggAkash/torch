@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="something_is_not_right">ఏదో సరిగ్గా లేదు</string>
+
+    <string name="share_app_message">🔦 మీ ఫోన్‌ను అసలైన ఫ్లాష్‌లైట్‌గా మార్చండి!\n\nనేను Torch వాడుతున్నాను, ఇది వెలగడం మాత్రమే కాదు, ఇంకా చాలా చేస్తుంది:\n\n💡 టార్చ్ — ఒక్క ట్యాప్‌తో వెంటనే పూర్తి ప్రకాశంతో వెలుగు\n🎉 స్ట్రోబ్ — సర్దుబాటు చేయగల ఫ్లాష్ వేగం. కచేరీకి తీసుకెళ్లి, ఫోన్ పైకెత్తి అందరిలో ప్రత్యేకంగా నిలవండి\n🆘 SOS — సహాయం వచ్చే వరకు ఆగకుండా వెలిగే ఆటోమేటిక్ మోర్స్ ఆపద సంకేతం\n\nఉచితం, చిన్న డౌన్‌లోడ్, సైన్-అప్ అవసరం లేదు. ఇక్కడ పొందండి:\nhttps://play.google.com/store/apps/details?id=com.engineerakash.torch</string>
+    <string name="share_app_subject">Torch — ఫ్లాష్‌లైట్, స్ట్రోబ్ మరియు SOS ఒకే యాప్‌లో</string>
+    <string name="share_via">దీని ద్వారా షేర్ చేయండి</string>
+
+    <string name="tab_torch">టార్చ్</string>
+    <string name="tab_strobe">మెరుపు</string>
+    <string name="tab_sos">SOS</string>
+
+    <string name="flashlight_is_on">ఫ్లాష్‌లైట్ ఆన్‌లో ఉంది</string>
+    <string name="flashlight_is_off">ఫ్లాష్‌లైట్ ఆఫ్‌లో ఉంది</string>
+    <string name="tap_to_turn_on">ఆన్ చేయడానికి బటన్‌ను నొక్కండి</string>
+    <string name="tap_to_turn_off">ఆఫ్ చేయడానికి బటన్‌ను నొక్కండి</string>
+    <string name="turn_on">ఆన్ చేయండి</string>
+    <string name="turn_off">ఆఫ్ చేయండి</string>
+
+    <string name="strobe_mode">స్ట్రోబ్ మోడ్</string>
+    <string name="strobe_caption">వేగాన్ని సర్దుబాటు చేసి ప్రారంభించండి</string>
+    <string name="strobe_warning">మెరిసే లైట్లు కాంతికి సున్నితంగా ఉండే వారిపై ప్రభావం చూపవచ్చు</string>
+    <string name="speed">వేగం</string>
+    <plurals name="flashes_per_sec">
+        <item quantity="one">%d ఫ్లాష్ / సెకను</item>
+        <item quantity="other">%d ఫ్లాష్‌లు / సెకను</item>
+    </plurals>
+    <string name="start_strobe">స్ట్రోబ్ ప్రారంభించండి</string>
+    <string name="stop_strobe">స్ట్రోబ్ ఆపండి</string>
+
+    <string name="sos">SOS</string>
+    <string name="sos_mode">SOS మోడ్</string>
+    <string name="sos_caption">అత్యవసర సంకేతం (··· −−− ···)</string>
+    <string name="start_sos">SOS ప్రారంభించండి</string>
+    <string name="stop_sos">SOS ఆపండి</string>
+
+    <string name="flash_not_available">ఈ పరికరంలో ఫ్లాష్ అందుబాటులో లేదు</string>
+
+    <string name="cd_share_app">ఈ యాప్‌ను షేర్ చేయండి</string>
+    <string name="cd_flashlight_illustration">ఫ్లాష్‌లైట్‌ను టోగుల్ చేయండి</string>
+    <string name="cd_strobe_illustration">స్ట్రోబ్‌ను టోగుల్ చేయండి</string>
+    <string name="cd_sos_illustration">SOSను టోగుల్ చేయండి</string>
+    <string name="cd_strobe_speed">స్ట్రోబ్ వేగం</string>
+</resources>

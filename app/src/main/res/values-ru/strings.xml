@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="something_is_not_right">Что-то пошло не так</string>
+
+    <string name="share_app_message">🔦 Превратите свой телефон в настоящий фонарик!\n\nЯ пользуюсь Torch — это приложение умеет гораздо больше, чем просто светить:\n\n💡 ФОНАРИК — мгновенный яркий свет одним касанием\n🎉 СТРОБОСКОП — регулируемая частота вспышек. Возьмите его на концерт, поднимите телефон повыше и выделитесь из толпы\n🆘 SOS — автоматический сигнал бедствия азбукой Морзе, который мигает, пока не придёт помощь\n\nБесплатно, крошечный размер, без регистрации. Скачайте здесь:\nhttps://play.google.com/store/apps/details?id=com.engineerakash.torch</string>
+    <string name="share_app_subject">Torch — фонарик, стробоскоп и SOS в одном приложении</string>
+    <string name="share_via">Поделиться через</string>
+
+    <string name="tab_torch">Фонарик</string>
+    <string name="tab_strobe">Строб</string>
+    <string name="tab_sos">SOS</string>
+
+    <string name="flashlight_is_on">Фонарик ВКЛЮЧЁН</string>
+    <string name="flashlight_is_off">Фонарик ВЫКЛЮЧЕН</string>
+    <string name="tap_to_turn_on">Нажмите кнопку, чтобы включить</string>
+    <string name="tap_to_turn_off">Нажмите кнопку, чтобы выключить</string>
+    <string name="turn_on">Включить</string>
+    <string name="turn_off">Выключить</string>
+
+    <string name="strobe_mode">Режим стробоскопа</string>
+    <string name="strobe_caption">Настройте скорость и запустите</string>
+    <string name="strobe_warning">Мигающий свет может повлиять на светочувствительных пользователей</string>
+    <string name="speed">Скорость</string>
+    <plurals name="flashes_per_sec">
+        <item quantity="one">%d вспышка / сек</item>
+        <item quantity="few">%d вспышки / сек</item>
+        <item quantity="many">%d вспышек / сек</item>
+        <item quantity="other">%d вспышки / сек</item>
+    </plurals>
+    <string name="start_strobe">Запустить строб</string>
+    <string name="stop_strobe">Остановить строб</string>
+
+    <string name="sos">SOS</string>
+    <string name="sos_mode">Режим SOS</string>
+    <string name="sos_caption">Сигнал бедствия (··· −−− ···)</string>
+    <string name="start_sos">Запустить SOS</string>
+    <string name="stop_sos">Остановить SOS</string>
+
+    <string name="flash_not_available">Вспышка недоступна на этом устройстве</string>
+
+    <string name="cd_share_app">Поделиться этим приложением</string>
+    <string name="cd_flashlight_illustration">Переключить фонарик</string>
+    <string name="cd_strobe_illustration">Переключить стробоскоп</string>
+    <string name="cd_sos_illustration">Переключить SOS</string>
+    <string name="cd_strobe_speed">Скорость стробоскопа</string>
+</resources>

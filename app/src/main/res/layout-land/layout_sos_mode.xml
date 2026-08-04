@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Landscape: illustration on one side, text and CTA on the other. See
+     layout-land/layout_torch_mode.xml for the reasoning. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sosModeRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/screen_margin_horizontal"
+    android:paddingEnd="@dimen/screen_margin_horizontal">
+
+    <FrameLayout
+        android:id="@+id/sosIllustrationContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/cd_sos_illustration"
+        android:focusable="true">
+
+        <!-- The padding is the room the pulse animation grows into: the rings are
+             drawn inside it, so scaling up stays within the view's own bounds and
+             the outermost ring never gets clipped. -->
+        <ImageView
+            android:id="@+id/sosRingsIv"
+            android:layout_width="@dimen/sos_rings_size"
+            android:layout_height="@dimen/sos_rings_size"
+            android:importantForAccessibility="no"
+            android:padding="@dimen/sos_rings_pulse_headroom"
+            android:src="@drawable/sos_rings" />
+
+        <TextView
+            android:id="@+id/sosBadgeTv"
+            android:layout_width="@dimen/sos_badge_size"
+            android:layout_height="@dimen/sos_badge_size"
+            android:layout_gravity="center"
+            android:background="@drawable/sos_badge_bg"
+            android:gravity="center"
+            android:importantForAccessibility="no"
+            android:letterSpacing="0.05"
+            android:text="@string/sos"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sos_badge_text_size"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/mode_controls_width"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/mode_column_gap"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/sosTitleTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sos_mode"
+            android:textAppearance="@style/TextAppearance.Torch.StatusTitle" />
+
+        <TextView
+            android:id="@+id/sosCaptionTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/sos_caption"
+            android:textAppearance="@style/TextAppearance.Torch.Caption" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sosToggleBtn"
+            style="@style/Widget.Torch.Button.Cta.Sos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/cta_margin_top"
+            android:text="@string/start_sos"
+            app:icon="@drawable/ic_play" />
+    </LinearLayout>
+
+</LinearLayout>

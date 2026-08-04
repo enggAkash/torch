@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="something_is_not_right">Jokin on vialla</string>
+
+    <string name="share_app_message">🔦 Muuta puhelimesi kunnon taskulampuksi!\n\nKäytän Torch-sovellusta, ja se tekee paljon muutakin kuin vain valaisee:\n\n💡 TASKULAMPPU — välitön täyden kirkkauden valo yhdellä napautuksella\n🎉 STROBO — säädettävä välkytysnopeus. Ota se mukaan keikalle, nosta puhelin ilmaan ja erotu joukosta\n🆘 SOS — automaattinen morse-hätämerkki, joka vilkkuu, kunnes apu saapuu\n\nIlmainen, pieni lataus, ei rekisteröitymistä. Hae se täältä:\nhttps://play.google.com/store/apps/details?id=com.engineerakash.torch</string>
+    <string name="share_app_subject">Torch — taskulamppu, strobo ja SOS samassa sovelluksessa</string>
+    <string name="share_via">Jaa sovelluksella</string>
+
+    <string name="tab_torch">Valo</string>
+    <string name="tab_strobe">Strobo</string>
+    <string name="tab_sos">SOS</string>
+
+    <string name="flashlight_is_on">Taskulamppu on PÄÄLLÄ</string>
+    <string name="flashlight_is_off">Taskulamppu on POIS PÄÄLTÄ</string>
+    <string name="tap_to_turn_on">Sytytä napauttamalla painiketta</string>
+    <string name="tap_to_turn_off">Sammuta napauttamalla painiketta</string>
+    <string name="turn_on">Sytytä</string>
+    <string name="turn_off">Sammuta</string>
+
+    <string name="strobe_mode">Strobotila</string>
+    <string name="strobe_caption">Säädä nopeus ja käynnistä</string>
+    <string name="strobe_warning">Vilkkuvat valot voivat vaikuttaa valoherkkiin käyttäjiin</string>
+    <string name="speed">Nopeus</string>
+    <plurals name="flashes_per_sec">
+        <item quantity="one">%d välähdys / s</item>
+        <item quantity="other">%d välähdystä / s</item>
+    </plurals>
+    <string name="start_strobe">Aloita strobo</string>
+    <string name="stop_strobe">Pysäytä strobo</string>
+
+    <string name="sos">SOS</string>
+    <string name="sos_mode">SOS-tila</string>
+    <string name="sos_caption">Hätäsignaali (··· −−− ···)</string>
+    <string name="start_sos">Aloita SOS</string>
+    <string name="stop_sos">Pysäytä SOS</string>
+
+    <string name="flash_not_available">Salama ei ole käytettävissä tällä laitteella</string>
+
+    <string name="cd_share_app">Jaa tämä sovellus</string>
+    <string name="cd_flashlight_illustration">Kytke taskulamppu päälle tai pois</string>
+    <string name="cd_strobe_illustration">Kytke strobo päälle tai pois</string>
+    <string name="cd_sos_illustration">Kytke SOS päälle tai pois</string>
+    <string name="cd_strobe_speed">Strobon nopeus</string>
+</resources>

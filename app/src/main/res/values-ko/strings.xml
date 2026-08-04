@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="something_is_not_right">문제가 발생했어요</string>
+
+    <string name="share_app_message">🔦 스마트폰을 제대로 된 손전등으로 만들어 보세요!\n\n저는 Torch를 쓰고 있는데, 단순히 빛나는 것 이상이에요:\n\n💡 손전등 — 한 번의 탭으로 즉시 최대 밝기 조명\n🎉 스트로브 — 깜박임 속도 조절 가능. 콘서트에 가져가서 폰을 높이 들고 돋보여 보세요\n🆘 SOS — 구조가 올 때까지 계속 깜박이는 자동 모스 부호 조난 신호\n\n무료에 용량도 작고 가입도 필요 없어요. 여기서 받으세요:\nhttps://play.google.com/store/apps/details?id=com.engineerakash.torch</string>
+    <string name="share_app_subject">Torch — 손전등, 스트로브, SOS가 하나의 앱에</string>
+    <string name="share_via">공유하기</string>
+
+    <string name="tab_torch">손전등</string>
+    <string name="tab_strobe">스트로브</string>
+    <string name="tab_sos">SOS</string>
+
+    <string name="flashlight_is_on">손전등이 켜져 있어요</string>
+    <string name="flashlight_is_off">손전등이 꺼져 있어요</string>
+    <string name="tap_to_turn_on">버튼을 눌러 켜세요</string>
+    <string name="tap_to_turn_off">버튼을 눌러 끄세요</string>
+    <string name="turn_on">켜기</string>
+    <string name="turn_off">끄기</string>
+
+    <string name="strobe_mode">스트로브 모드</string>
+    <string name="strobe_caption">속도를 조절하고 시작하세요</string>
+    <string name="strobe_warning">깜박이는 불빛은 광과민성 사용자에게 영향을 줄 수 있어요</string>
+    <string name="speed">속도</string>
+    <plurals name="flashes_per_sec">
+        <item quantity="other">초당 %d회 깜박임</item>
+    </plurals>
+    <string name="start_strobe">스트로브 시작</string>
+    <string name="stop_strobe">스트로브 중지</string>
+
+    <string name="sos">SOS</string>
+    <string name="sos_mode">SOS 모드</string>
+    <string name="sos_caption">긴급 신호 (··· −−− ···)</string>
+    <string name="start_sos">SOS 시작</string>
+    <string name="stop_sos">SOS 중지</string>
+
+    <string name="flash_not_available">이 기기에서는 플래시를 사용할 수 없어요</string>
+
+    <string name="cd_share_app">앱 공유하기</string>
+    <string name="cd_flashlight_illustration">손전등 켜기/끄기</string>
+    <string name="cd_strobe_illustration">스트로브 켜기/끄기</string>
+    <string name="cd_sos_illustration">SOS 켜기/끄기</string>
+    <string name="cd_strobe_speed">스트로브 속도</string>
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="something_is_not_right">Noe er ikke som det skal</string>
+
+    <string name="share_app_message">🔦 Gjør telefonen din om til en skikkelig lommelykt!\n\nJeg bruker Torch, og den gjør mye mer enn bare å lyse:\n\n💡 LOMMELYKT — umiddelbart lys med full styrke med ett trykk\n🎉 STROBE — justerbar blinkehastighet. Ta den med på konsert, løft telefonen og skill deg ut fra mengden\n🆘 SOS — automatisk morse-nødsignal som blinker helt til hjelpen kommer\n\nGratis, liten nedlasting, ingen registrering. Last den ned her:\nhttps://play.google.com/store/apps/details?id=com.engineerakash.torch</string>
+    <string name="share_app_subject">Torch — lommelykt, strobe og SOS i én app</string>
+    <string name="share_via">Del via</string>
+
+    <string name="tab_torch">Lykt</string>
+    <string name="tab_strobe">Strobe</string>
+    <string name="tab_sos">SOS</string>
+
+    <string name="flashlight_is_on">Lommelykten er PÅ</string>
+    <string name="flashlight_is_off">Lommelykten er AV</string>
+    <string name="tap_to_turn_on">Trykk på knappen for å slå på</string>
+    <string name="tap_to_turn_off">Trykk på knappen for å slå av</string>
+    <string name="turn_on">Slå på</string>
+    <string name="turn_off">Slå av</string>
+
+    <string name="strobe_mode">Strobemodus</string>
+    <string name="strobe_caption">Juster hastigheten og start</string>
+    <string name="strobe_warning">Blinkende lys kan påvirke lysfølsomme personer</string>
+    <string name="speed">Hastighet</string>
+    <plurals name="flashes_per_sec">
+        <item quantity="one">%d blink / sek</item>
+        <item quantity="other">%d blink / sek</item>
+    </plurals>
+    <string name="start_strobe">Start strobe</string>
+    <string name="stop_strobe">Stopp strobe</string>
+
+    <string name="sos">SOS</string>
+    <string name="sos_mode">SOS-modus</string>
+    <string name="sos_caption">Nødsignal (··· −−− ···)</string>
+    <string name="start_sos">Start SOS</string>
+    <string name="stop_sos">Stopp SOS</string>
+
+    <string name="flash_not_available">Blits er ikke tilgjengelig på denne enheten</string>
+
+    <string name="cd_share_app">Del denne appen</string>
+    <string name="cd_flashlight_illustration">Slå lommelykten av eller på</string>
+    <string name="cd_strobe_illustration">Slå stroben av eller på</string>
+    <string name="cd_sos_illustration">Slå SOS av eller på</string>
+    <string name="cd_strobe_speed">Strobehastighet</string>
+</resources>

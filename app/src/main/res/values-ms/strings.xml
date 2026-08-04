@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="something_is_not_right">Ada sesuatu yang tidak kena</string>
+
+    <string name="share_app_message">🔦 Jadikan telefon anda lampu suluh yang sebenar!\n\nSaya menggunakan Torch dan ia bukan sekadar menyala:\n\n💡 LAMPU SULUH — cahaya kecerahan penuh serta-merta dengan satu ketikan\n🎉 STROB — kelajuan denyar boleh laras. Bawa ke konsert, angkat telefon anda dan serlahkan diri anda dalam kalangan orang ramai\n🆘 SOS — isyarat kecemasan Morse automatik yang terus berkelip sehingga bantuan tiba\n\nPercuma, saiz muat turun kecil, tanpa pendaftaran. Dapatkannya di sini:\nhttps://play.google.com/store/apps/details?id=com.engineerakash.torch</string>
+    <string name="share_app_subject">Torch — lampu suluh, strob dan SOS dalam satu aplikasi</string>
+    <string name="share_via">Kongsi melalui</string>
+
+    <string name="tab_torch">Suluh</string>
+    <string name="tab_strobe">Strob</string>
+    <string name="tab_sos">SOS</string>
+
+    <string name="flashlight_is_on">Lampu suluh HIDUP</string>
+    <string name="flashlight_is_off">Lampu suluh MATI</string>
+    <string name="tap_to_turn_on">Ketik butang untuk menghidupkan</string>
+    <string name="tap_to_turn_off">Ketik butang untuk mematikan</string>
+    <string name="turn_on">Hidupkan</string>
+    <string name="turn_off">Matikan</string>
+
+    <string name="strobe_mode">Mod Strob</string>
+    <string name="strobe_caption">Laraskan kelajuan dan mulakan</string>
+    <string name="strobe_warning">Lampu berkelip mungkin menjejaskan pengguna yang sensitif terhadap cahaya</string>
+    <string name="speed">Kelajuan</string>
+    <plurals name="flashes_per_sec">
+        <item quantity="other">%d denyar / saat</item>
+    </plurals>
+    <string name="start_strobe">Mulakan Strob</string>
+    <string name="stop_strobe">Hentikan Strob</string>
+
+    <string name="sos">SOS</string>
+    <string name="sos_mode">Mod SOS</string>
+    <string name="sos_caption">Isyarat kecemasan (··· −−− ···)</string>
+    <string name="start_sos">Mulakan SOS</string>
+    <string name="stop_sos">Hentikan SOS</string>
+
+    <string name="flash_not_available">Lampu kilat tidak tersedia pada peranti ini</string>
+
+    <string name="cd_share_app">Kongsi aplikasi ini</string>
+    <string name="cd_flashlight_illustration">Togol lampu suluh</string>
+    <string name="cd_strobe_illustration">Togol strob</string>
+    <string name="cd_sos_illustration">Togol SOS</string>
+    <string name="cd_strobe_speed">Kelajuan strob</string>
+</resources>

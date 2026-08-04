@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Breathing pulse for a mode's illustration: on-screen proof that the light is
+     running. repeatMode="reverse" with an ease-in-out interpolator makes each
+     half-cycle settle at the ends instead of snapping back.
+
+     A target whose parent hugs it exactly needs room to grow into, or its outer
+     edge is clipped: see sos_rings_pulse_headroom. The strobe circle sits in a
+     full-width parent, so it has room already. -->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:ordering="together">
+
+    <objectAnimator
+        android:duration="650"
+        android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+        android:propertyName="scaleX"
+        android:repeatCount="infinite"
+        android:repeatMode="reverse"
+        android:valueFrom="1.0"
+        android:valueTo="1.08"
+        android:valueType="floatType" />
+
+    <objectAnimator
+        android:duration="650"
+        android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+        android:propertyName="scaleY"
+        android:repeatCount="infinite"
+        android:repeatMode="reverse"
+        android:valueFrom="1.0"
+        android:valueTo="1.08"
+        android:valueType="floatType" />
+
+    <objectAnimator
+        android:duration="650"
+        android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+        android:propertyName="alpha"
+        android:repeatCount="infinite"
+        android:repeatMode="reverse"
+        android:valueFrom="1.0"
+        android:valueTo="0.45"
+        android:valueType="floatType" />
+
+</set>

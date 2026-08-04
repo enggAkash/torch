@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="something_is_not_right">ಏನೋ ಸರಿಯಿಲ್ಲ</string>
+
+    <string name="share_app_message">🔦 ನಿಮ್ಮ ಫೋನ್ ಅನ್ನು ನಿಜವಾದ ಫ್ಲ್ಯಾಶ್‌ಲೈಟ್ ಆಗಿ ಮಾರ್ಪಡಿಸಿ!\n\nನಾನು Torch ಬಳಸುತ್ತಿದ್ದೇನೆ, ಇದು ಬರೀ ಬೆಳಗುವುದಕ್ಕಿಂತ ಹೆಚ್ಚಿನದನ್ನು ಮಾಡುತ್ತದೆ:\n\n💡 ಟಾರ್ಚ್ — ಒಂದೇ ಟ್ಯಾಪ್‌ನಲ್ಲಿ ತಕ್ಷಣದ, ಪೂರ್ಣ ಪ್ರಕಾಶದ ಬೆಳಕು\n🎉 ಸ್ಟ್ರೋಬ್ — ಹೊಂದಿಸಬಹುದಾದ ಫ್ಲ್ಯಾಶ್ ವೇಗ. ಸಂಗೀತ ಕಛೇರಿಗೆ ಕೊಂಡೊಯ್ದು, ಫೋನ್ ಮೇಲೆತ್ತಿ ಜನಸಂದಣಿಯಲ್ಲಿ ಎದ್ದು ಕಾಣಿರಿ\n🆘 SOS — ಸಹಾಯ ಬರುವವರೆಗೂ ಮಿನುಗುತ್ತಲೇ ಇರುವ ಸ್ವಯಂಚಾಲಿತ ಮೋರ್ಸ್ ಅಪಾಯ ಸಂಕೇತ\n\nಉಚಿತ, ಚಿಕ್ಕ ಡೌನ್‌ಲೋಡ್, ಸೈನ್-ಅಪ್ ಬೇಕಿಲ್ಲ. ಇಲ್ಲಿ ಪಡೆಯಿರಿ:\nhttps://play.google.com/store/apps/details?id=com.engineerakash.torch</string>
+    <string name="share_app_subject">Torch — ಫ್ಲ್ಯಾಶ್‌ಲೈಟ್, ಸ್ಟ್ರೋಬ್ ಮತ್ತು SOS ಒಂದೇ ಆ್ಯಪ್‌ನಲ್ಲಿ</string>
+    <string name="share_via">ಈ ಮೂಲಕ ಹಂಚಿಕೊಳ್ಳಿ</string>
+
+    <string name="tab_torch">ಟಾರ್ಚ್</string>
+    <string name="tab_strobe">ಮಿಂಚು</string>
+    <string name="tab_sos">SOS</string>
+
+    <string name="flashlight_is_on">ಫ್ಲ್ಯಾಶ್‌ಲೈಟ್ ಆನ್ ಆಗಿದೆ</string>
+    <string name="flashlight_is_off">ಫ್ಲ್ಯಾಶ್‌ಲೈಟ್ ಆಫ್ ಆಗಿದೆ</string>
+    <string name="tap_to_turn_on">ಆನ್ ಮಾಡಲು ಬಟನ್ ಟ್ಯಾಪ್ ಮಾಡಿ</string>
+    <string name="tap_to_turn_off">ಆಫ್ ಮಾಡಲು ಬಟನ್ ಟ್ಯಾಪ್ ಮಾಡಿ</string>
+    <string name="turn_on">ಆನ್ ಮಾಡಿ</string>
+    <string name="turn_off">ಆಫ್ ಮಾಡಿ</string>
+
+    <string name="strobe_mode">ಸ್ಟ್ರೋಬ್ ಮೋಡ್</string>
+    <string name="strobe_caption">ವೇಗವನ್ನು ಹೊಂದಿಸಿ ಪ್ರಾರಂಭಿಸಿ</string>
+    <string name="strobe_warning">ಮಿನುಗುವ ದೀಪಗಳು ಬೆಳಕಿಗೆ ಸೂಕ್ಷ್ಮವಾಗಿರುವವರ ಮೇಲೆ ಪರಿಣಾಮ ಬೀರಬಹುದು</string>
+    <string name="speed">ವೇಗ</string>
+    <plurals name="flashes_per_sec">
+        <item quantity="one">%d ಫ್ಲ್ಯಾಶ್ / ಸೆಕೆಂಡ್</item>
+        <item quantity="other">%d ಫ್ಲ್ಯಾಶ್‌ಗಳು / ಸೆಕೆಂಡ್</item>
+    </plurals>
+    <string name="start_strobe">ಸ್ಟ್ರೋಬ್ ಪ್ರಾರಂಭಿಸಿ</string>
+    <string name="stop_strobe">ಸ್ಟ್ರೋಬ್ ನಿಲ್ಲಿಸಿ</string>
+
+    <string name="sos">SOS</string>
+    <string name="sos_mode">SOS ಮೋಡ್</string>
+    <string name="sos_caption">ತುರ್ತು ಸಂಕೇತ (··· −−− ···)</string>
+    <string name="start_sos">SOS ಪ್ರಾರಂಭಿಸಿ</string>
+    <string name="stop_sos">SOS ನಿಲ್ಲಿಸಿ</string>
+
+    <string name="flash_not_available">ಈ ಸಾಧನದಲ್ಲಿ ಫ್ಲ್ಯಾಶ್ ಲಭ್ಯವಿಲ್ಲ</string>
+
+    <string name="cd_share_app">ಈ ಆ್ಯಪ್ ಹಂಚಿಕೊಳ್ಳಿ</string>
+    <string name="cd_flashlight_illustration">ಫ್ಲ್ಯಾಶ್‌ಲೈಟ್ ಟಾಗಲ್ ಮಾಡಿ</string>
+    <string name="cd_strobe_illustration">ಸ್ಟ್ರೋಬ್ ಟಾಗಲ್ ಮಾಡಿ</string>
+    <string name="cd_sos_illustration">SOS ಟಾಗಲ್ ಮಾಡಿ</string>
+    <string name="cd_strobe_speed">ಸ್ಟ್ರೋಬ್ ವೇಗ</string>
+</resources>

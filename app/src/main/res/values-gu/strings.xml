@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="something_is_not_right">કંઈક ગડબડ છે</string>
+
+    <string name="share_app_message">🔦 તમારા ફોનને સાચી ફ્લેશલાઇટ બનાવો!\n\nહું Torch વાપરું છું અને તે માત્ર પ્રકાશ આપવા કરતાં ઘણું વધારે કરે છે:\n\n💡 ટોર્ચ — એક ટૅપમાં તરત, પૂરી બ્રાઇટનેસવાળો પ્રકાશ\n🎉 સ્ટ્રોબ — ફ્લેશની ઝડપ તમારી રીતે સેટ કરો. કૉન્સર્ટમાં લઈ જાઓ, ફોન ઊંચો કરો અને ભીડમાં અલગ દેખાઓ\n🆘 SOS — આપમેળે ચાલતું મોર્સ સંકટ સિગ્નલ, જે મદદ આવે ત્યાં સુધી ફ્લેશ થતું રહે છે\n\nમફત, નાનું ડાઉનલોડ, કોઈ સાઇન-અપ નહીં. અહીંથી મેળવો:\nhttps://play.google.com/store/apps/details?id=com.engineerakash.torch</string>
+    <string name="share_app_subject">Torch — ફ્લેશલાઇટ, સ્ટ્રોબ અને SOS એક જ ઍપમાં</string>
+    <string name="share_via">આના દ્વારા શેર કરો</string>
+
+    <string name="tab_torch">ટોર્ચ</string>
+    <string name="tab_strobe">સ્ટ્રોબ</string>
+    <string name="tab_sos">SOS</string>
+
+    <string name="flashlight_is_on">ફ્લેશલાઇટ ચાલુ છે</string>
+    <string name="flashlight_is_off">ફ્લેશલાઇટ બંધ છે</string>
+    <string name="tap_to_turn_on">ચાલુ કરવા માટે બટન ટૅપ કરો</string>
+    <string name="tap_to_turn_off">બંધ કરવા માટે બટન ટૅપ કરો</string>
+    <string name="turn_on">ચાલુ કરો</string>
+    <string name="turn_off">બંધ કરો</string>
+
+    <string name="strobe_mode">સ્ટ્રોબ મોડ</string>
+    <string name="strobe_caption">ઝડપ સેટ કરો અને શરૂ કરો</string>
+    <string name="strobe_warning">ઝબકતી લાઇટ પ્રકાશ-સંવેદનશીલ વપરાશકર્તાઓને અસર કરી શકે છે</string>
+    <string name="speed">ઝડપ</string>
+    <plurals name="flashes_per_sec">
+        <item quantity="one">%d ફ્લેશ / સેકન્ડ</item>
+        <item quantity="other">%d ફ્લેશ / સેકન્ડ</item>
+    </plurals>
+    <string name="start_strobe">સ્ટ્રોબ શરૂ કરો</string>
+    <string name="stop_strobe">સ્ટ્રોબ બંધ કરો</string>
+
+    <string name="sos">SOS</string>
+    <string name="sos_mode">SOS મોડ</string>
+    <string name="sos_caption">કટોકટી સિગ્નલ (··· −−− ···)</string>
+    <string name="start_sos">SOS શરૂ કરો</string>
+    <string name="stop_sos">SOS બંધ કરો</string>
+
+    <string name="flash_not_available">આ ડિવાઇસ પર ફ્લેશ ઉપલબ્ધ નથી</string>
+
+    <string name="cd_share_app">આ ઍપ શેર કરો</string>
+    <string name="cd_flashlight_illustration">ફ્લેશલાઇટ ટૉગલ કરો</string>
+    <string name="cd_strobe_illustration">સ્ટ્રોબ ટૉગલ કરો</string>
+    <string name="cd_sos_illustration">SOS ટૉગલ કરો</string>
+    <string name="cd_strobe_speed">સ્ટ્રોબની ઝડપ</string>
+</resources>

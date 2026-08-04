@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="something_is_not_right">တစ်ခုခု မှားယွင်းနေပါသည်</string>
+
+    <string name="share_app_message">🔦 သင့်ဖုန်းကို စစ်မှန်သော ဓာတ်မီးအဖြစ် ပြောင်းလိုက်ပါ!\n\nကျွန်ုပ် Torch ကို သုံးနေပြီး ၎င်းသည် အလင်းထွက်ရုံထက် များစွာ ပိုလုပ်ဆောင်ပေးပါသည် -\n\n💡 TORCH — တစ်ချက်နှိပ်ရုံဖြင့် အလင်းအပြည့် ချက်ချင်းလင်းမည်\n🎉 STROBE — မီးမှိတ်တုတ်အမြန်နှုန်းကို ချိန်ညှိနိုင်သည်။ ဖျော်ဖြေပွဲသို့ ယူသွားပြီး ဖုန်းကိုမြှင့်ကာ လူအုပ်ထဲမှ ထင်ရှားစွာ ပေါ်လွင်ပါ\n🆘 SOS — အကူအညီရောက်သည်အထိ ဆက်တိုက်မှိတ်တုတ်နေမည့် အလိုအလျောက် Morse အရေးပေါ်အချက်ပြ\n\nအခမဲ့၊ ဒေါင်းလုဒ်အရွယ်သေး၊ အကောင့်ဖွင့်စရာမလို။ ဤနေရာတွင် ရယူပါ -\nhttps://play.google.com/store/apps/details?id=com.engineerakash.torch</string>
+    <string name="share_app_subject">Torch — ဓာတ်မီး၊ မှိတ်တုတ်မီးနှင့် SOS တစ်အက်ပ်တည်းတွင်</string>
+    <string name="share_via">မျှဝေမည့်နည်းလမ်း</string>
+
+    <string name="tab_torch">ဓာတ်မီး</string>
+    <string name="tab_strobe">မှိတ်တုတ်</string>
+    <string name="tab_sos">SOS</string>
+
+    <string name="flashlight_is_on">ဓာတ်မီး ဖွင့်ထားသည်</string>
+    <string name="flashlight_is_off">ဓာတ်မီး ပိတ်ထားသည်</string>
+    <string name="tap_to_turn_on">ဖွင့်ရန် ခလုတ်ကို နှိပ်ပါ</string>
+    <string name="tap_to_turn_off">ပိတ်ရန် ခလုတ်ကို နှိပ်ပါ</string>
+    <string name="turn_on">ဖွင့်ရန်</string>
+    <string name="turn_off">ပိတ်ရန်</string>
+
+    <string name="strobe_mode">မှိတ်တုတ်မုဒ်</string>
+    <string name="strobe_caption">အမြန်နှုန်းချိန်ညှိပြီး စတင်ပါ</string>
+    <string name="strobe_warning">မှိတ်တုတ်လင်းနေသော အလင်းများသည် အလင်းကြောင့် ထိခိုက်လွယ်သူများအပေါ် သက်ရောက်မှုရှိနိုင်သည်</string>
+    <string name="speed">အမြန်နှုန်း</string>
+    <plurals name="flashes_per_sec">
+        <item quantity="other">တစ်စက္ကန့်လျှင် %d ကြိမ်</item>
+    </plurals>
+    <string name="start_strobe">မှိတ်တုတ် စတင်</string>
+    <string name="stop_strobe">မှိတ်တုတ် ရပ်</string>
+
+    <string name="sos">SOS</string>
+    <string name="sos_mode">SOS မုဒ်</string>
+    <string name="sos_caption">အရေးပေါ် အချက်ပြ (··· −−− ···)</string>
+    <string name="start_sos">SOS စတင်</string>
+    <string name="stop_sos">SOS ရပ်</string>
+
+    <string name="flash_not_available">ဤစက်တွင် ဖလက်ရှ်မီး မရနိုင်ပါ</string>
+
+    <string name="cd_share_app">ဤအက်ပ်ကို မျှဝေရန်</string>
+    <string name="cd_flashlight_illustration">ဓာတ်မီး ဖွင့်/ပိတ်ရန်</string>
+    <string name="cd_strobe_illustration">မှိတ်တုတ်မီး ဖွင့်/ပိတ်ရန်</string>
+    <string name="cd_sos_illustration">SOS ဖွင့်/ပိတ်ရန်</string>
+    <string name="cd_strobe_speed">မှိတ်တုတ် အမြန်နှုန်း</string>
+</resources>

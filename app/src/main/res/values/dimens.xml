@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="screen_margin_horizontal">20dp</dimen>
+    <dimen name="header_margin_top">16dp</dimen>
+    <dimen name="tab_bar_corner_radius">10dp</dimen>
+    <dimen name="tab_pill_corner_radius">10dp</dimen>
+
+    <dimen name="illustration_size">200dp</dimen>
+    <dimen name="beam_width">160dp</dimen>
+    <dimen name="beam_height">150dp</dimen>
+    <dimen name="strobe_circle_size">180dp</dimen>
+    <dimen name="strobe_bolt_padding">40dp</dimen>
+    <dimen name="sos_rings_size">220dp</dimen>
+    <!-- Inset the rings by this much so the pulse animation's 8% scale-up has
+         room inside the view; must be >= sos_rings_size * (1.08 - 1) / (2 * 1.08) -->
+    <dimen name="sos_rings_pulse_headroom">9dp</dimen>
+    <dimen name="sos_badge_size">120dp</dimen>
+    <dimen name="sos_badge_corner_radius">28dp</dimen>
+    <dimen name="sos_badge_text_size">34sp</dimen>
+
+    <!-- Landscape two-column content: both columns are content-sized and centred as a
+         pair, so a wide screen adds outer margin instead of stretching the CTA. -->
+    <dimen name="mode_column_gap">28dp</dimen>
+    <dimen name="mode_controls_width">300dp</dimen>
+
+    <dimen name="cta_corner_radius">16dp</dimen>
+    <dimen name="cta_height">56dp</dimen>
+    <dimen name="cta_icon_size">22dp</dimen>
+    <dimen name="cta_text_size">18sp</dimen>
+    <dimen name="cta_margin_top">24dp</dimen>
+    <!-- Keeps a clear gap between the CTA and the ad banner directly below it, so a
+         thumb aiming at one can't land on the other. Portrait only: the landscape
+         layouts don't use this, they have their own tighter spacing. -->
+    <dimen name="cta_margin_bottom">32dp</dimen>
+
+    <!-- Floor for the banner slot so the CTA never shifts when an ad arrives.
+         MainActivity replaces this with the exact adaptive banner height. -->
+    <dimen name="ad_banner_reserved_height">50dp</dimen>
+</resources>

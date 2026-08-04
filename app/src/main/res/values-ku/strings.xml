@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="something_is_not_right">Tiştek xelet e</string>
+
+    <string name="share_app_message">🔦 Telefona xwe bike çirayeke rastîn!\n\nEz Torchê bi kar tînim û ew ji ronahîdanê gelek zêdetir dike:\n\n💡 ÇIRA — bi yek tikandinê ronahiya yekser û bi tevahî geş\n🎉 STROB — leza çirûskê tê eyarkirin. Bibe konserê, telefona xwe rake û di nav girseyê de xuya bibe\n🆘 SOS — sînyala alîkariyê ya Morsê ya otomatîk ku heta alîkarî were diçirûse\n\nBelaş e, daxistineke biçûk e, tomarbûn nayê xwestin. Ji vir bigire:\nhttps://play.google.com/store/apps/details?id=com.engineerakash.torch</string>
+    <string name="share_app_subject">Torch — çira, strob û SOS di yek sepanê de</string>
+    <string name="share_via">Parve bike bi rêya</string>
+
+    <string name="tab_torch">Çira</string>
+    <string name="tab_strobe">Strob</string>
+    <string name="tab_sos">SOS</string>
+
+    <string name="flashlight_is_on">Çira vêketî ye</string>
+    <string name="flashlight_is_off">Çira vemirî ye</string>
+    <string name="tap_to_turn_on">Ji bo vêxistinê bişkokê bitikîne</string>
+    <string name="tap_to_turn_off">Ji bo vemirandinê bişkokê bitikîne</string>
+    <string name="turn_on">Vêxe</string>
+    <string name="turn_off">Vemirîne</string>
+
+    <string name="strobe_mode">Moda Strobê</string>
+    <string name="strobe_caption">Lezê eyar bike û dest pê bike</string>
+    <string name="strobe_warning">Ronahiyên ku diçirûsin dibe ku bandorê li bikarhênerên li hember ronahiyê hestiyar bikin</string>
+    <string name="speed">Lez</string>
+    <plurals name="flashes_per_sec">
+        <item quantity="one">%d çirûsk / saniye</item>
+        <item quantity="other">%d çirûsk / saniye</item>
+    </plurals>
+    <string name="start_strobe">Strobê vêxe</string>
+    <string name="stop_strobe">Strobê rawestîne</string>
+
+    <string name="sos">SOS</string>
+    <string name="sos_mode">Moda SOS</string>
+    <string name="sos_caption">Sînyala awarte (··· −−− ···)</string>
+    <string name="start_sos">SOSê vêxe</string>
+    <string name="stop_sos">SOSê rawestîne</string>
+
+    <string name="flash_not_available">Li ser vê cîhazê flaş tune ye</string>
+
+    <string name="cd_share_app">Vê sepanê parve bike</string>
+    <string name="cd_flashlight_illustration">Çirayê vêxe/vemirîne</string>
+    <string name="cd_strobe_illustration">Strobê vêxe/vemirîne</string>
+    <string name="cd_sos_illustration">SOSê vêxe/vemirîne</string>
+    <string name="cd_strobe_speed">Leza strobê</string>
+</resources>

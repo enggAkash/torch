@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="something_is_not_right">Kuna hitilafu fulani</string>
+
+    <string name="share_app_message">🔦 Geuza simu yako kuwa tochi kamili!\n\nNinatumia Torch na inafanya mengi zaidi ya kuangaza tu:\n\n💡 TOCHI — mwanga kamili wa papo hapo kwa mguso mmoja\n🎉 STROBE — kasi ya kumulika inayoweza kurekebishwa. Ipeleke kwenye tamasha, inua simu yako na ujitokeze kati ya umati\n🆘 SOS — ishara ya dharura ya Morse inayoendelea kumulika hadi msaada ufike\n\nBure, upakuaji mdogo, hakuna kujisajili. Ipate hapa:\nhttps://play.google.com/store/apps/details?id=com.engineerakash.torch</string>
+    <string name="share_app_subject">Torch — tochi, strobe na SOS katika programu moja</string>
+    <string name="share_via">Shiriki kupitia</string>
+
+    <string name="tab_torch">Tochi</string>
+    <string name="tab_strobe">Strobe</string>
+    <string name="tab_sos">SOS</string>
+
+    <string name="flashlight_is_on">Tochi IMEWASHWA</string>
+    <string name="flashlight_is_off">Tochi IMEZIMWA</string>
+    <string name="tap_to_turn_on">Gusa kitufe ili kuwasha</string>
+    <string name="tap_to_turn_off">Gusa kitufe ili kuzima</string>
+    <string name="turn_on">Washa</string>
+    <string name="turn_off">Zima</string>
+
+    <string name="strobe_mode">Hali ya Strobe</string>
+    <string name="strobe_caption">Rekebisha kasi kisha uanze</string>
+    <string name="strobe_warning">Taa zinazomulika zinaweza kuathiri watumiaji walio na hisia kali kwa mwanga</string>
+    <string name="speed">Kasi</string>
+    <plurals name="flashes_per_sec">
+        <item quantity="one">Mmweko %d kwa sekunde</item>
+        <item quantity="other">Mimweko %d kwa sekunde</item>
+    </plurals>
+    <string name="start_strobe">Anza Strobe</string>
+    <string name="stop_strobe">Sitisha Strobe</string>
+
+    <string name="sos">SOS</string>
+    <string name="sos_mode">Hali ya SOS</string>
+    <string name="sos_caption">Ishara ya dharura (··· −−− ···)</string>
+    <string name="start_sos">Anza SOS</string>
+    <string name="stop_sos">Sitisha SOS</string>
+
+    <string name="flash_not_available">Flash haipatikani kwenye kifaa hiki</string>
+
+    <string name="cd_share_app">Shiriki programu hii</string>
+    <string name="cd_flashlight_illustration">Washa au zima tochi</string>
+    <string name="cd_strobe_illustration">Washa au zima strobe</string>
+    <string name="cd_sos_illustration">Washa au zima SOS</string>
+    <string name="cd_strobe_speed">Kasi ya strobe</string>
+</resources>
