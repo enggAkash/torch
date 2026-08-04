@@ -5,6 +5,7 @@ import android.animation.AnimatorInflater
 import android.app.Dialog
 import android.app.TimePickerDialog
 import android.content.Intent
+import android.graphics.Typeface
 import android.net.ConnectivityManager
 import android.net.Network
 import android.net.NetworkCapabilities
@@ -44,12 +45,12 @@ class MainActivity : AppCompatActivity() {
     private var networkCallback: ConnectivityManager.NetworkCallback? = null
 
     /**
-     * Anchored adaptive banner for a 360dp-wide slot. Resolved once per activity so the
-     * space reserved up front is exactly what the loaded ad occupies; the activity is
+     * Large anchored adaptive banner for a 360dp-wide slot. Resolved once per activity so
+     * the space reserved up front is exactly what the loaded ad occupies; the activity is
      * recreated on rotation, so this picks up the new orientation's height.
      */
     private val adSize by lazy {
-        AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this, 360)
+        AdSize.getLargeAnchoredAdaptiveBannerAdSize(this, 360)
     }
 
     private lateinit var mainRoot: View
@@ -341,6 +342,9 @@ class MainActivity : AppCompatActivity() {
         fun bindRow(id: Int, selected: Boolean, onPick: () -> Unit) {
             val row = sheet.findViewById<TextView>(id) ?: return
             if (selected) {
+                row.setBackgroundResource(R.drawable.bg_sheet_option_selected)
+                row.setTextColor(getColor(R.color.purple_primary))
+                row.setTypeface(row.typeface, Typeface.BOLD)
                 row.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.ic_check, 0)
                 ViewCompat.setStateDescription(row, getString(R.string.cd_selected))
             }
