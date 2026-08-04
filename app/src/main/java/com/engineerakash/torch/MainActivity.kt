@@ -45,12 +45,18 @@ class MainActivity : AppCompatActivity() {
     private var networkCallback: ConnectivityManager.NetworkCallback? = null
 
     /**
-     * Large anchored adaptive banner for a 360dp-wide slot. Resolved once per activity so
-     * the space reserved up front is exactly what the loaded ad occupies; the activity is
+     * Anchored adaptive banner for a 360dp-wide slot. Resolved once per activity so the
+     * space reserved up front is exactly what the loaded ad occupies; the activity is
      * recreated on rotation, so this picks up the new orientation's height.
+     *
+     * Deliberately the deprecated compact variant (50-90dp tall). Its designated
+     * successor, getLargeAnchoredAdaptiveBannerAdSize, returns 50-150dp with no
+     * supported way to cap it, which crowds the mode CTA in landscape. Revisit only
+     * if a future SDK release removes this method.
      */
+    @Suppress("DEPRECATION")
     private val adSize by lazy {
-        AdSize.getLargeAnchoredAdaptiveBannerAdSize(this, 360)
+        AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this, 360)
     }
 
     private lateinit var mainRoot: View
