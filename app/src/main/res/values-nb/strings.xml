@@ -16,6 +16,13 @@
     <string name="tap_to_turn_off">Trykk på knappen for å slå av</string>
     <string name="turn_on">Slå på</string>
     <string name="turn_off">Slå av</string>
+    <string name="auto_off_label">Slå av lyset etter</string>
+    <string name="never">Aldri</string>
+    <string name="custom">Egendefinert</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="one">%d min</item>
+        <item quantity="other">%d min</item>
+    </plurals>
 
     <string name="strobe_mode">Strobemodus</string>
     <string name="strobe_caption">Juster hastigheten og start</string>
@@ -41,4 +48,5 @@
     <string name="cd_strobe_illustration">Slå stroben av eller på</string>
     <string name="cd_sos_illustration">Slå SOS av eller på</string>
     <string name="cd_strobe_speed">Strobehastighet</string>
+    <string name="cd_selected">Valgt</string>
 </resources>

@@ -7,6 +7,7 @@ import android.hardware.camera2.CameraCharacteristics
 import android.hardware.camera2.CameraManager
 import android.os.Handler
 import android.os.Looper
+import android.os.SystemClock
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
@@ -49,8 +50,18 @@ class TorchViewModel(private val application: Application) : AndroidViewModel(ap
     private val torchCallback = object : CameraManager.TorchCallback() {
         override fun onTorchModeChanged(cameraId: String, enabled: Boolean) {
             if (cameraId == this@TorchViewModel.cameraId) {
+                val wasOn = lastKnownTorchOn
                 lastKnownTorchOn = enabled
                 _isTorchOn.postValue(enabled)
+                // External flips (quick-settings tile, camera app claiming the flash)
+                // must move the auto-off countdown with them: cancel it when the light
+                // it guards dies, arm it when a torch appears. In-app paths write
+                // lastKnownTorchOn before their echo lands here, so self-initiated
+                // changes no-op; the TORCH-tab guard in scheduleAutoOff keeps
+                // strobe/SOS flips from ever arming a countdown.
+                if (enabled != wasOn) {
+                    if (enabled) scheduleAutoOff() else cancelAutoOff()
+                }
             }
         }
     }
@@ -86,15 +97,31 @@ class TorchViewModel(private val application: Application) : AndroidViewModel(ap
     private val _activeMode = MutableLiveData<TorchMode?>(null)
     val activeMode: LiveData<TorchMode?> = _activeMode
 
-    private val _strobeRate = MutableLiveData(DEFAULT_STROBE_RATE)
+    // Clamped on load in case a stale or hand-edited pref falls outside the slider range
+    private val initialStrobeRate = TorchPrefs.loadStrobeRate(application, DEFAULT_STROBE_RATE)
+        .coerceIn(MIN_STROBE_RATE, MAX_STROBE_RATE)
+
+    private val _strobeRate = MutableLiveData(initialStrobeRate)
     val strobeRate: LiveData<Int> = _strobeRate
 
     // Read by the strobe loop on a background dispatcher, written from the main thread
     @Volatile
-    private var strobeRateHz = DEFAULT_STROBE_RATE
+    private var strobeRateHz = initialStrobeRate
 
     private val _errorMessage = MutableLiveData<String?>()
     val errorMessage: LiveData<String?> = _errorMessage
+
+    private val _autoOffSetting =
+        MutableLiveData<AutoOffSetting>(TorchPrefs.loadAutoOffSetting(application))
+    val autoOffSetting: LiveData<AutoOffSetting> = _autoOffSetting
+
+    // Seconds left on a running countdown; null while none is running
+    private val _autoOffRemainingSecs = MutableLiveData<Long?>(null)
+    val autoOffRemainingSecs: LiveData<Long?> = _autoOffRemainingSecs
+
+    // Deliberately separate from activeJob: the countdown guards the steady TORCH mode
+    // and must never join the strobe/SOS exclusivity chain. Main thread only.
+    private var autoOffJob: Job? = null
 
     private var activeJob: Job? = null
 
@@ -125,8 +152,14 @@ class TorchViewModel(private val application: Application) : AndroidViewModel(ap
             // Joining first means a cancelled loop's finally (torch off) always lands
             // before — and so can never extinguish — this turn-on
             previous?.cancelAndJoin()
-            if (!setTorchHardware(true)) {
+            if (setTorchHardware(true)) {
+                scheduleAutoOff()
+            } else {
                 lastKnownTorchOn = false
+                // A setAutoOff picked while this turn-on was in flight saw the
+                // optimistic lastKnownTorchOn and armed a countdown; the light it
+                // would guard never came on
+                cancelAutoOff()
             }
         }
     }
@@ -152,10 +185,69 @@ class TorchViewModel(private val application: Application) : AndroidViewModel(ap
         strobeRateHz = clamped
         if (_strobeRate.value != clamped) {
             _strobeRate.value = clamped
+            TorchPrefs.saveStrobeRate(application, clamped)
+        }
+    }
+
+    fun setAutoOff(setting: AutoOffSetting) {
+        if (_autoOffSetting.value != setting) {
+            _autoOffSetting.value = setting
+            TorchPrefs.saveAutoOffSetting(application, setting)
+        }
+        // Always reschedule: re-picking the current duration restarts its countdown
+        // from now. No-ops while the torch is off.
+        scheduleAutoOff()
+    }
+
+    /** Main thread. (Re)starts the countdown for the current setting, if the torch is on. */
+    private fun scheduleAutoOff() {
+        cancelAutoOff()
+        if (!lastKnownTorchOn || _selectedTab.value != TorchMode.TORCH) return
+        val remainingMs: () -> Long = when (val setting = _autoOffSetting.value ?: AutoOffSetting.Never) {
+            AutoOffSetting.Never -> return
+            is AutoOffSetting.AfterMinutes -> {
+                // elapsedRealtime: a wall-clock edit mid-countdown can't stretch it
+                val deadline = SystemClock.elapsedRealtime() + setting.minutes * 60_000L
+                ({ deadline - SystemClock.elapsedRealtime() })
+            }
+            is AutoOffSetting.AtTime -> {
+                // Wall clock on purpose: a manual clock edit moves the remaining time.
+                // A timezone change does not — the timer keeps the originally
+                // scheduled instant
+                val deadline = nextOccurrenceEpochMs(setting.hour, setting.minute)
+                ({ deadline - System.currentTimeMillis() })
+            }
+        }
+        autoOffJob = viewModelScope.launch {
+            while (true) {
+                // Remaining is recomputed from the deadline each tick, so the countdown
+                // can't drift, and a process the OS froze fires immediately on thaw.
+                // (A guaranteed on-time fire while frozen would need AlarmManager plus a
+                // foreground service; out of proportion for this app.)
+                val left = remainingMs()
+                if (left <= 0) break
+                _autoOffRemainingSecs.value = (left + 999) / 1000  // ceil: opens on "5:00", never shows "0:00"
+                delay(minOf(1_000L, left))
+            }
+            _autoOffRemainingSecs.value = null
+            // stopAll cancels this very job, which is safe: cancellation only lands at a
+            // suspension point and nothing suspends after this call
+            stopAll()
+        }
+    }
+
+    /** Main thread. Kills the running countdown; the persisted setting is untouched. */
+    private fun cancelAutoOff() {
+        autoOffJob?.cancel()
+        autoOffJob = null
+        if (_autoOffRemainingSecs.value != null) {
+            _autoOffRemainingSecs.value = null
         }
     }
 
     fun stopAll() {
+        // Any running auto-off countdown dies with the light it was guarding
+        cancelAutoOff()
         // Cancel but keep the reference: launchExclusive must still be able to join the
         // old job so its finally can't extinguish the next mode's first flash
         activeJob?.cancel()

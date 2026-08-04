@@ -17,6 +17,14 @@
     <string name="turn_on">Vula</string>
     <string name="turn_off">Cisha</string>
 
+    <string name="auto_off_label">Cisha ukukhanya ngemuva kwe-</string>
+    <string name="never">Akusoze</string>
+    <string name="custom">Okwezifiso</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="one">umzuzu ongu-%d</item>
+        <item quantity="other">imizuzu engu-%d</item>
+    </plurals>
+
     <string name="strobe_mode">Imodi ye-Strobe</string>
     <string name="strobe_caption">Lungisa isivinini bese uqala</string>
     <string name="strobe_warning">Izibani ezibhanyazayo zingase zithinte abasebenzisi abazwela ukukhanya</string>
@@ -41,4 +49,5 @@
     <string name="cd_strobe_illustration">Vula noma ucishe i-strobe</string>
     <string name="cd_sos_illustration">Vula noma ucishe i-SOS</string>
     <string name="cd_strobe_speed">Isivinini se-strobe</string>
+    <string name="cd_selected">Kukhethiwe</string>
 </resources>

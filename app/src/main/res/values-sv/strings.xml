@@ -17,6 +17,14 @@
     <string name="turn_on">Slå på</string>
     <string name="turn_off">Stäng av</string>
 
+    <string name="auto_off_label">Stäng av ljuset efter</string>
+    <string name="never">Aldrig</string>
+    <string name="custom">Anpassad</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="one">%d min</item>
+        <item quantity="other">%d min</item>
+    </plurals>
+
     <string name="strobe_mode">Strobeläge</string>
     <string name="strobe_caption">Justera hastigheten och starta</string>
     <string name="strobe_warning">Blinkande ljus kan påverka ljuskänsliga personer</string>
@@ -41,4 +49,5 @@
     <string name="cd_strobe_illustration">Slå på eller av stroben</string>
     <string name="cd_sos_illustration">Slå på eller av SOS</string>
     <string name="cd_strobe_speed">Strobehastighet</string>
+    <string name="cd_selected">Vald</string>
 </resources>

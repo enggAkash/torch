@@ -17,6 +17,15 @@
     <string name="turn_on">Allumer</string>
     <string name="turn_off">Éteindre</string>
 
+    <string name="auto_off_label">Éteindre la lumière après</string>
+    <string name="never">Jamais</string>
+    <string name="custom">Personnalisé</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="one">%d min</item>
+        <item quantity="many">%d min</item>
+        <item quantity="other">%d min</item>
+    </plurals>
+
     <string name="strobe_mode">Mode stroboscope</string>
     <string name="strobe_caption">Réglez la vitesse et démarrez</string>
     <string name="strobe_warning">Les lumières clignotantes peuvent affecter les personnes photosensibles</string>
@@ -42,4 +51,5 @@
     <string name="cd_strobe_illustration">Activer ou désactiver le stroboscope</string>
     <string name="cd_sos_illustration">Activer ou désactiver le signal SOS</string>
     <string name="cd_strobe_speed">Vitesse du stroboscope</string>
+    <string name="cd_selected">Sélectionné</string>
 </resources>

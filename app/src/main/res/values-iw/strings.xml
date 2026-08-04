@@ -17,6 +17,15 @@
     <string name="turn_on">הדלקה</string>
     <string name="turn_off">כיבוי</string>
 
+    <string name="auto_off_label">כיבוי הפנס אחרי</string>
+    <string name="never">אף פעם</string>
+    <string name="custom">מותאם אישית</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="one">%d דק\'</item>
+        <item quantity="two">%d דק\'</item>
+        <item quantity="other">%d דק\'</item>
+    </plurals>
+
     <string name="strobe_mode">מצב סטרובוסקופ</string>
     <string name="strobe_caption">כווננו את המהירות והתחילו</string>
     <string name="strobe_warning">אורות מהבהבים עלולים להשפיע על משתמשים עם רגישות לאור</string>
@@ -42,4 +51,5 @@
     <string name="cd_strobe_illustration">הפעלה או כיבוי של הסטרובוסקופ</string>
     <string name="cd_sos_illustration">הפעלה או כיבוי של SOS</string>
     <string name="cd_strobe_speed">מהירות הסטרובוסקופ</string>
+    <string name="cd_selected">נבחר</string>
 </resources>

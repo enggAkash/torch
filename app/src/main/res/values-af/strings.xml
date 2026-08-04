@@ -17,6 +17,14 @@
     <string name="turn_on">Skakel aan</string>
     <string name="turn_off">Skakel af</string>
 
+    <string name="auto_off_label">Skakel lig af ná</string>
+    <string name="never">Nooit</string>
+    <string name="custom">Pasgemaak</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="one">%d min</item>
+        <item quantity="other">%d min</item>
+    </plurals>
+
     <string name="strobe_mode">Strobe-modus</string>
     <string name="strobe_caption">Stel spoed en begin</string>
     <string name="strobe_warning">Flitsende ligte kan fotosensitiewe gebruikers beïnvloed</string>
@@ -41,4 +49,5 @@
     <string name="cd_strobe_illustration">Skakel strobe aan of af</string>
     <string name="cd_sos_illustration">Skakel SOS aan of af</string>
     <string name="cd_strobe_speed">Strobe-spoed</string>
+    <string name="cd_selected">Gekies</string>
 </resources>

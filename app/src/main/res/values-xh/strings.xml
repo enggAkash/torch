@@ -17,6 +17,14 @@
     <string name="turn_on">Vula</string>
     <string name="turn_off">Cima</string>
 
+    <string name="auto_off_label">Cima ukukhanya emva kwe-</string>
+    <string name="never">Ungaze</string>
+    <string name="custom">Ngokwezifiso</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="one">umzuzu ongu-%d</item>
+        <item quantity="other">imizuzu engu-%d</item>
+    </plurals>
+
     <string name="strobe_mode">Imowudi ye-Strobe</string>
     <string name="strobe_caption">Lungisa isantya uze uqale</string>
     <string name="strobe_warning">Izibane ezidanyazayo zinokuchaphazela abasebenzisi abanovakalelo lokukhanya</string>
@@ -41,4 +49,5 @@
     <string name="cd_strobe_illustration">Vula okanye ucime i-strobe</string>
     <string name="cd_sos_illustration">Vula okanye ucime i-SOS</string>
     <string name="cd_strobe_speed">Isantya se-strobe</string>
+    <string name="cd_selected">Ikhethiwe</string>
 </resources>

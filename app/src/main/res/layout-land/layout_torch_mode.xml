@@ -62,12 +62,49 @@
             android:text="@string/tap_to_turn_on"
             android:textAppearance="@style/TextAppearance.Torch.Caption" />
 
+        <LinearLayout
+            android:id="@+id/autoOffRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:minHeight="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/auto_off_label"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/autoOffValueTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_secondary"
+                android:textSize="16sp"
+                tools:text="Never" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="4dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_chevron_down" />
+        </LinearLayout>
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/torchToggleBtn"
             style="@style/Widget.Torch.Button.Cta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/cta_margin_top"
+            android:layout_marginTop="12dp"
             android:text="@string/turn_on"
             app:icon="@drawable/ic_power" />
     </LinearLayout>

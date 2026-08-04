@@ -17,6 +17,14 @@
     <string name="turn_on">இயக்கு</string>
     <string name="turn_off">அணை</string>
 
+    <string name="auto_off_label">இந்த நேரத்திற்குப் பிறகு விளக்கை அணை</string>
+    <string name="never">ஒருபோதும் இல்லை</string>
+    <string name="custom">தனிப்பயன்</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="one">%d நிமி</item>
+        <item quantity="other">%d நிமி</item>
+    </plurals>
+
     <string name="strobe_mode">ஸ்ட்ரோப் பயன்முறை</string>
     <string name="strobe_caption">வேகத்தைச் சரிசெய்து தொடங்கவும்</string>
     <string name="strobe_warning">மின்னும் ஒளி, ஒளி உணர்திறன் உள்ள பயனர்களைப் பாதிக்கலாம்</string>
@@ -41,4 +49,5 @@
     <string name="cd_strobe_illustration">ஸ்ட்ரோபை இயக்கு/அணை</string>
     <string name="cd_sos_illustration">SOS-ஐ இயக்கு/அணை</string>
     <string name="cd_strobe_speed">ஸ்ட்ரோப் வேகம்</string>
+    <string name="cd_selected">தேர்ந்தெடுக்கப்பட்டது</string>
 </resources>

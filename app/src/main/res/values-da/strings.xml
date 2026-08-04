@@ -17,6 +17,14 @@
     <string name="turn_on">Tænd</string>
     <string name="turn_off">Sluk</string>
 
+    <string name="auto_off_label">Sluk lyset efter</string>
+    <string name="never">Aldrig</string>
+    <string name="custom">Tilpasset</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="one">%d min.</item>
+        <item quantity="other">%d min.</item>
+    </plurals>
+
     <string name="strobe_mode">Strobetilstand</string>
     <string name="strobe_caption">Juster hastigheden, og start</string>
     <string name="strobe_warning">Blinkende lys kan påvirke lysfølsomme personer</string>
@@ -41,4 +49,5 @@
     <string name="cd_strobe_illustration">Tænd eller sluk stroben</string>
     <string name="cd_sos_illustration">Tænd eller sluk SOS</string>
     <string name="cd_strobe_speed">Strobehastighed</string>
+    <string name="cd_selected">Valgt</string>
 </resources>

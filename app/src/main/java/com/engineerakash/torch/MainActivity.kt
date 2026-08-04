@@ -2,12 +2,15 @@ package com.engineerakash.torch
 
 import android.animation.Animator
 import android.animation.AnimatorInflater
+import android.app.Dialog
+import android.app.TimePickerDialog
 import android.content.Intent
 import android.net.ConnectivityManager
 import android.net.Network
 import android.net.NetworkCapabilities
 import android.net.NetworkRequest
 import android.os.Bundle
+import android.text.format.DateFormat
 import android.view.View
 import android.widget.FrameLayout
 import android.widget.ImageButton
@@ -26,9 +29,11 @@ import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.slider.Slider
 import com.google.android.material.tabs.TabLayout
+import java.util.Calendar
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -56,6 +61,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var torchStatusTitleTv: TextView
     private lateinit var torchStatusCaptionTv: TextView
     private lateinit var torchToggleBtn: MaterialButton
+    private lateinit var autoOffRow: View
+    private lateinit var autoOffValueTv: TextView
     private lateinit var strobeSpeedValueTv: TextView
     private lateinit var strobeSpeedSlider: Slider
     private lateinit var strobeToggleBtn: MaterialButton
@@ -65,6 +72,10 @@ class MainActivity : AppCompatActivity() {
 
     // Mirrors TorchViewModel.activeMode so onStart can resume the right pulse
     private var runningMode: TorchMode? = null
+
+    // Whichever auto-off chooser is open (bottom sheet or time picker), so onDestroy can
+    // dismiss it; neither is restored across rotation, in line with the no-fragment setup
+    private var autoOffDialog: Dialog? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
@@ -96,6 +107,8 @@ class MainActivity : AppCompatActivity() {
         torchStatusTitleTv = findViewById(R.id.torchStatusTitleTv)
         torchStatusCaptionTv = findViewById(R.id.torchStatusCaptionTv)
         torchToggleBtn = findViewById(R.id.torchToggleBtn)
+        autoOffRow = findViewById(R.id.autoOffRow)
+        autoOffValueTv = findViewById(R.id.autoOffValueTv)
         strobeSpeedValueTv = findViewById(R.id.strobeSpeedValueTv)
         strobeSpeedSlider = findViewById(R.id.strobeSpeedSlider)
         strobeToggleBtn = findViewById(R.id.strobeToggleBtn)
@@ -205,6 +218,10 @@ class MainActivity : AppCompatActivity() {
             torchViewModel.toggleTorch()
         }
 
+        autoOffRow.setOnClickListener {
+            showAutoOffSheet()
+        }
+
         strobeToggleBtn.setOnClickListener {
             torchViewModel.toggleStrobe()
         }
@@ -255,6 +272,10 @@ class MainActivity : AppCompatActivity() {
             updateScreenBackground()
         }
 
+        // Both funnel into one renderer so a setting change and a tick can't fight
+        torchViewModel.autoOffSetting.observe(this) { updateAutoOffRow() }
+        torchViewModel.autoOffRemainingSecs.observe(this) { updateAutoOffRow() }
+
         torchViewModel.activeMode.observe(this) { activeMode ->
             runningMode = activeMode
 
@@ -287,6 +308,81 @@ class MainActivity : AppCompatActivity() {
                 torchViewModel.onErrorShown()
             }
         }
+    }
+
+    /** Live countdown while one is running, otherwise the chosen setting's label. */
+    private fun updateAutoOffRow() {
+        val remainingSecs = torchViewModel.autoOffRemainingSecs.value
+        autoOffValueTv.text = if (remainingSecs != null) {
+            formatCountdown(remainingSecs)
+        } else {
+            formatAutoOffSetting(torchViewModel.autoOffSetting.value ?: AutoOffSetting.Never)
+        }
+    }
+
+    private fun formatAutoOffSetting(setting: AutoOffSetting): String = when (setting) {
+        AutoOffSetting.Never -> getString(R.string.never)
+        is AutoOffSetting.AfterMinutes ->
+            resources.getQuantityString(R.plurals.auto_off_minutes, setting.minutes, setting.minutes)
+        // getTimeFormat follows the system 12/24h setting, so "6:30 PM" or "18:30"
+        is AutoOffSetting.AtTime -> DateFormat.getTimeFormat(this).format(
+            Calendar.getInstance().apply {
+                set(Calendar.HOUR_OF_DAY, setting.hour)
+                set(Calendar.MINUTE, setting.minute)
+            }.time
+        )
+    }
+
+    private fun showAutoOffSheet() {
+        val sheet = BottomSheetDialog(this)
+        sheet.setContentView(R.layout.bottom_sheet_auto_off)
+        val current = torchViewModel.autoOffSetting.value ?: AutoOffSetting.Never
+
+        fun bindRow(id: Int, selected: Boolean, onPick: () -> Unit) {
+            val row = sheet.findViewById<TextView>(id) ?: return
+            if (selected) {
+                row.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.ic_check, 0)
+                ViewCompat.setStateDescription(row, getString(R.string.cd_selected))
+            }
+            row.setOnClickListener {
+                // No confirm button by design: picking an option applies it immediately
+                sheet.dismiss()
+                onPick()
+            }
+        }
+
+        bindRow(R.id.autoOffNever, current == AutoOffSetting.Never) {
+            torchViewModel.setAutoOff(AutoOffSetting.Never)
+        }
+        for ((id, minutes) in listOf(R.id.autoOff5 to 5, R.id.autoOff10 to 10, R.id.autoOff30 to 30)) {
+            sheet.findViewById<TextView>(id)?.text =
+                resources.getQuantityString(R.plurals.auto_off_minutes, minutes, minutes)
+            bindRow(id, current == AutoOffSetting.AfterMinutes(minutes)) {
+                torchViewModel.setAutoOff(AutoOffSetting.AfterMinutes(minutes))
+            }
+        }
+        bindRow(R.id.autoOffCustom, current is AutoOffSetting.AtTime) {
+            showAutoOffTimePicker()
+        }
+
+        sheet.setOnDismissListener { if (autoOffDialog === sheet) autoOffDialog = null }
+        autoOffDialog = sheet
+        sheet.show()
+    }
+
+    private fun showAutoOffTimePicker() {
+        val current = torchViewModel.autoOffSetting.value as? AutoOffSetting.AtTime
+        val now = Calendar.getInstance()
+        val picker = TimePickerDialog(
+            this,
+            { _, hour, minute -> torchViewModel.setAutoOff(AutoOffSetting.AtTime(hour, minute)) },
+            current?.hour ?: now.get(Calendar.HOUR_OF_DAY),
+            current?.minute ?: now.get(Calendar.MINUTE),
+            DateFormat.is24HourFormat(this)
+        )
+        picker.setOnDismissListener { if (autoOffDialog === picker) autoOffDialog = null }
+        autoOffDialog = picker
+        picker.show()
     }
 
     /** Slightly grey while idle, the brighter lavender while any mode has the light going. */
@@ -334,6 +430,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onDestroy() {
+        autoOffDialog?.dismiss()
+        autoOffDialog = null
         unregisterNetworkCallback()
         adView?.destroy()
         adView = null

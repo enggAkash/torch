@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="8dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/screen_margin_horizontal"
+        android:paddingTop="16dp"
+        android:paddingEnd="@dimen/screen_margin_horizontal"
+        android:paddingBottom="8dp"
+        android:text="@string/auto_off_label"
+        android:textAppearance="@style/TextAppearance.Torch.StatusTitle" />
+
+    <TextView
+        android:id="@+id/autoOffNever"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:minHeight="48dp"
+        android:paddingStart="@dimen/screen_margin_horizontal"
+        android:paddingEnd="@dimen/screen_margin_horizontal"
+        android:text="@string/never"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/autoOff5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:minHeight="48dp"
+        android:paddingStart="@dimen/screen_margin_horizontal"
+        android:paddingEnd="@dimen/screen_margin_horizontal"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp"
+        tools:text="5 min" />
+
+    <TextView
+        android:id="@+id/autoOff10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:minHeight="48dp"
+        android:paddingStart="@dimen/screen_margin_horizontal"
+        android:paddingEnd="@dimen/screen_margin_horizontal"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp"
+        tools:text="10 min" />
+
+    <TextView
+        android:id="@+id/autoOff30"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:minHeight="48dp"
+        android:paddingStart="@dimen/screen_margin_horizontal"
+        android:paddingEnd="@dimen/screen_margin_horizontal"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp"
+        tools:text="30 min" />
+
+    <TextView
+        android:id="@+id/autoOffCustom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:minHeight="48dp"
+        android:paddingStart="@dimen/screen_margin_horizontal"
+        android:paddingEnd="@dimen/screen_margin_horizontal"
+        android:text="@string/custom"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp" />
+
+</LinearLayout>

@@ -17,6 +17,14 @@
     <string name="turn_on">Washa</string>
     <string name="turn_off">Zima</string>
 
+    <string name="auto_off_label">Zima mwanga baada ya</string>
+    <string name="never">Kamwe</string>
+    <string name="custom">Maalum</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="one">dak %d</item>
+        <item quantity="other">dak %d</item>
+    </plurals>
+
     <string name="strobe_mode">Hali ya Strobe</string>
     <string name="strobe_caption">Rekebisha kasi kisha uanze</string>
     <string name="strobe_warning">Taa zinazomulika zinaweza kuathiri watumiaji walio na hisia kali kwa mwanga</string>
@@ -41,4 +49,5 @@
     <string name="cd_strobe_illustration">Washa au zima strobe</string>
     <string name="cd_sos_illustration">Washa au zima SOS</string>
     <string name="cd_strobe_speed">Kasi ya strobe</string>
+    <string name="cd_selected">Imechaguliwa</string>
 </resources>

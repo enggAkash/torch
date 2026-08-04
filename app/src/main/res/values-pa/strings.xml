@@ -16,6 +16,13 @@
     <string name="tap_to_turn_off">ਬੰਦ ਕਰਨ ਲਈ ਬਟਨ \'ਤੇ ਟੈਪ ਕਰੋ</string>
     <string name="turn_on">ਚਾਲੂ ਕਰੋ</string>
     <string name="turn_off">ਬੰਦ ਕਰੋ</string>
+    <string name="auto_off_label">ਇੰਨੇ ਸਮੇਂ ਬਾਅਦ ਲਾਈਟ ਬੰਦ ਕਰੋ</string>
+    <string name="never">ਕਦੇ ਨਹੀਂ</string>
+    <string name="custom">ਕਸਟਮ</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="one">%d ਮਿੰਟ</item>
+        <item quantity="other">%d ਮਿੰਟ</item>
+    </plurals>
 
     <string name="strobe_mode">ਸਟ੍ਰੋਬ ਮੋਡ</string>
     <string name="strobe_caption">ਸਪੀਡ ਅਡਜਸਟ ਕਰੋ ਅਤੇ ਸ਼ੁਰੂ ਕਰੋ</string>
@@ -41,4 +48,5 @@
     <string name="cd_strobe_illustration">ਸਟ੍ਰੋਬ ਚਾਲੂ/ਬੰਦ ਕਰੋ</string>
     <string name="cd_sos_illustration">SOS ਚਾਲੂ/ਬੰਦ ਕਰੋ</string>
     <string name="cd_strobe_speed">ਸਟ੍ਰੋਬ ਦੀ ਸਪੀਡ</string>
+    <string name="cd_selected">ਚੁਣਿਆ ਗਿਆ</string>
 </resources>

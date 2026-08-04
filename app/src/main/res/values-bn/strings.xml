@@ -17,6 +17,14 @@
     <string name="turn_on">চালু করুন</string>
     <string name="turn_off">বন্ধ করুন</string>
 
+    <string name="auto_off_label">যত সময় পর আলো বন্ধ হবে</string>
+    <string name="never">কখনও নয়</string>
+    <string name="custom">কাস্টম</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="one">%d মিনিট</item>
+        <item quantity="other">%d মিনিট</item>
+    </plurals>
+
     <string name="strobe_mode">স্ট্রোব মোড</string>
     <string name="strobe_caption">গতি সেট করে শুরু করুন</string>
     <string name="strobe_warning">ঝলকানো আলো আলোক-সংবেদনশীল ব্যবহারকারীদের ওপর প্রভাব ফেলতে পারে</string>
@@ -41,4 +49,5 @@
     <string name="cd_strobe_illustration">স্ট্রোব টগল করুন</string>
     <string name="cd_sos_illustration">SOS টগল করুন</string>
     <string name="cd_strobe_speed">স্ট্রোবের গতি</string>
+    <string name="cd_selected">নির্বাচিত</string>
 </resources>

@@ -17,6 +17,14 @@
     <string name="turn_on">ഓൺ ചെയ്യുക</string>
     <string name="turn_off">ഓഫ് ചെയ്യുക</string>
 
+    <string name="auto_off_label">ഇത്ര സമയത്തിന് ശേഷം ലൈറ്റ് ഓഫ് ചെയ്യുക</string>
+    <string name="never">ഒരിക്കലും വേണ്ട</string>
+    <string name="custom">ഇഷ്‌ടാനുസൃതം</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="one">%d മിനിറ്റ്</item>
+        <item quantity="other">%d മിനിറ്റ്</item>
+    </plurals>
+
     <string name="strobe_mode">സ്ട്രോബ് മോഡ്</string>
     <string name="strobe_caption">വേഗത ക്രമീകരിച്ച് ആരംഭിക്കുക</string>
     <string name="strobe_warning">മിന്നുന്ന ലൈറ്റുകൾ പ്രകാശത്തോട് സംവേദനക്ഷമതയുള്ളവരെ ബാധിച്ചേക്കാം</string>
@@ -41,4 +49,5 @@
     <string name="cd_strobe_illustration">സ്ട്രോബ് ടോഗിൾ ചെയ്യുക</string>
     <string name="cd_sos_illustration">SOS ടോഗിൾ ചെയ്യുക</string>
     <string name="cd_strobe_speed">സ്ട്രോബ് വേഗത</string>
+    <string name="cd_selected">തിരഞ്ഞെടുത്തു</string>
 </resources>

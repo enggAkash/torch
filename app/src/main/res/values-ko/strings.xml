@@ -17,6 +17,13 @@
     <string name="turn_on">켜기</string>
     <string name="turn_off">끄기</string>
 
+    <string name="auto_off_label">다음 시간 후 손전등 끄기</string>
+    <string name="never">안 함</string>
+    <string name="custom">직접 설정</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="other">%d분</item>
+    </plurals>
+
     <string name="strobe_mode">스트로브 모드</string>
     <string name="strobe_caption">속도를 조절하고 시작하세요</string>
     <string name="strobe_warning">깜박이는 불빛은 광과민성 사용자에게 영향을 줄 수 있어요</string>
@@ -40,4 +47,5 @@
     <string name="cd_strobe_illustration">스트로브 켜기/끄기</string>
     <string name="cd_sos_illustration">SOS 켜기/끄기</string>
     <string name="cd_strobe_speed">스트로브 속도</string>
+    <string name="cd_selected">선택됨</string>
 </resources>
