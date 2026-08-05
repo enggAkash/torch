@@ -17,6 +17,14 @@
     <string name="turn_on">Einschalten</string>
     <string name="turn_off">Ausschalten</string>
 
+    <string name="auto_off_label">Licht ausschalten nach</string>
+    <string name="never">Nie</string>
+    <string name="custom">Benutzerdefiniert</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="one">%d Min.</item>
+        <item quantity="other">%d Min.</item>
+    </plurals>
+
     <string name="strobe_mode">Stroboskop-Modus</string>
     <string name="strobe_caption">Geschwindigkeit anpassen und starten</string>
     <string name="strobe_warning">Blinkende Lichter können lichtempfindliche Nutzer beeinträchtigen</string>
@@ -41,4 +49,5 @@
     <string name="cd_strobe_illustration">Stroboskop umschalten</string>
     <string name="cd_sos_illustration">SOS umschalten</string>
     <string name="cd_strobe_speed">Stroboskop-Geschwindigkeit</string>
+    <string name="cd_selected">Ausgewählt</string>
 </resources>

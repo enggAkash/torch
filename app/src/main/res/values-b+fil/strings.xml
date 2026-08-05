@@ -17,6 +17,14 @@
     <string name="turn_on">I-on</string>
     <string name="turn_off">I-off</string>
 
+    <string name="auto_off_label">I-off ang ilaw pagkatapos ng</string>
+    <string name="never">Hindi kailanman</string>
+    <string name="custom">Custom</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="one">%d min</item>
+        <item quantity="other">%d min</item>
+    </plurals>
+
     <string name="strobe_mode">Strobe Mode</string>
     <string name="strobe_caption">I-adjust ang bilis at magsimula</string>
     <string name="strobe_warning">Ang kumikislap na ilaw ay maaaring makaapekto sa mga user na sensitibo sa liwanag</string>
@@ -41,4 +49,5 @@
     <string name="cd_strobe_illustration">I-toggle ang strobe</string>
     <string name="cd_sos_illustration">I-toggle ang SOS</string>
     <string name="cd_strobe_speed">Bilis ng strobe</string>
+    <string name="cd_selected">Napili</string>
 </resources>

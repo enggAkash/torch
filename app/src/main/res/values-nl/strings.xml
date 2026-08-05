@@ -16,6 +16,13 @@
     <string name="tap_to_turn_off">Tik op de knop om uit te schakelen</string>
     <string name="turn_on">Inschakelen</string>
     <string name="turn_off">Uitschakelen</string>
+    <string name="auto_off_label">Licht uitschakelen na</string>
+    <string name="never">Nooit</string>
+    <string name="custom">Aangepast</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="one">%d min</item>
+        <item quantity="other">%d min</item>
+    </plurals>
 
     <string name="strobe_mode">Strobe-modus</string>
     <string name="strobe_caption">Pas de snelheid aan en start</string>
@@ -41,4 +48,5 @@
     <string name="cd_strobe_illustration">Strobe in- of uitschakelen</string>
     <string name="cd_sos_illustration">SOS in- of uitschakelen</string>
     <string name="cd_strobe_speed">Strobesnelheid</string>
+    <string name="cd_selected">Geselecteerd</string>
 </resources>

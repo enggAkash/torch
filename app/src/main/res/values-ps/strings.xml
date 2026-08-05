@@ -17,6 +17,14 @@
     <string name="turn_on">بل کړئ</string>
     <string name="turn_off">بند کړئ</string>
 
+    <string name="auto_off_label">له دې وخت وروسته څراغ بند کړئ</string>
+    <string name="never">هېڅکله</string>
+    <string name="custom">ځانګړی</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="one">%d دقیقه</item>
+        <item quantity="other">%d دقیقې</item>
+    </plurals>
+
     <string name="strobe_mode">د سټروب حالت</string>
     <string name="strobe_caption">سرعت تنظیم کړئ او پیل کړئ</string>
     <string name="strobe_warning">بریښېدونکې رڼاګانې کېدای شي پر هغو کسانو اغېز وکړي چې رڼا ته حساس دي</string>
@@ -41,4 +49,5 @@
     <string name="cd_strobe_illustration">سټروب بل/بند کړئ</string>
     <string name="cd_sos_illustration">SOS بل/بند کړئ</string>
     <string name="cd_strobe_speed">د سټروب سرعت</string>
+    <string name="cd_selected">ټاکل شوی</string>
 </resources>

@@ -17,6 +17,14 @@
     <string name="turn_on">Sytytä</string>
     <string name="turn_off">Sammuta</string>
 
+    <string name="auto_off_label">Sammuta valo tämän ajan kuluttua</string>
+    <string name="never">Ei koskaan</string>
+    <string name="custom">Mukautettu</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="one">%d min</item>
+        <item quantity="other">%d min</item>
+    </plurals>
+
     <string name="strobe_mode">Strobotila</string>
     <string name="strobe_caption">Säädä nopeus ja käynnistä</string>
     <string name="strobe_warning">Vilkkuvat valot voivat vaikuttaa valoherkkiin käyttäjiin</string>
@@ -41,4 +49,5 @@
     <string name="cd_strobe_illustration">Kytke strobo päälle tai pois</string>
     <string name="cd_sos_illustration">Kytke SOS päälle tai pois</string>
     <string name="cd_strobe_speed">Strobon nopeus</string>
+    <string name="cd_selected">Valittu</string>
 </resources>

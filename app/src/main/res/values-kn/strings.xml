@@ -17,6 +17,14 @@
     <string name="turn_on">ಆನ್ ಮಾಡಿ</string>
     <string name="turn_off">ಆಫ್ ಮಾಡಿ</string>
 
+    <string name="auto_off_label">ಇಷ್ಟು ಸಮಯದ ನಂತರ ಲೈಟ್ ಆಫ್ ಮಾಡಿ</string>
+    <string name="never">ಎಂದಿಗೂ ಬೇಡ</string>
+    <string name="custom">ಕಸ್ಟಮ್</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="one">%d ನಿಮಿ</item>
+        <item quantity="other">%d ನಿಮಿ</item>
+    </plurals>
+
     <string name="strobe_mode">ಸ್ಟ್ರೋಬ್ ಮೋಡ್</string>
     <string name="strobe_caption">ವೇಗವನ್ನು ಹೊಂದಿಸಿ ಪ್ರಾರಂಭಿಸಿ</string>
     <string name="strobe_warning">ಮಿನುಗುವ ದೀಪಗಳು ಬೆಳಕಿಗೆ ಸೂಕ್ಷ್ಮವಾಗಿರುವವರ ಮೇಲೆ ಪರಿಣಾಮ ಬೀರಬಹುದು</string>
@@ -41,4 +49,5 @@
     <string name="cd_strobe_illustration">ಸ್ಟ್ರೋಬ್ ಟಾಗಲ್ ಮಾಡಿ</string>
     <string name="cd_sos_illustration">SOS ಟಾಗಲ್ ಮಾಡಿ</string>
     <string name="cd_strobe_speed">ಸ್ಟ್ರೋಬ್ ವೇಗ</string>
+    <string name="cd_selected">ಆಯ್ಕೆ ಮಾಡಲಾಗಿದೆ</string>
 </resources>

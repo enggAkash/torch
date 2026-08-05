@@ -17,6 +17,14 @@
     <string name="turn_on">روشن کردن</string>
     <string name="turn_off">خاموش کردن</string>
 
+    <string name="auto_off_label">خاموش کردن چراغ بعد از</string>
+    <string name="never">هرگز</string>
+    <string name="custom">دلخواه</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="one">%d دقیقه</item>
+        <item quantity="other">%d دقیقه</item>
+    </plurals>
+
     <string name="strobe_mode">حالت استروب</string>
     <string name="strobe_caption">سرعت را تنظیم و شروع کنید</string>
     <string name="strobe_warning">نورهای چشمک‌زن ممکن است بر افراد حساس به نور تأثیر بگذارد</string>
@@ -41,4 +49,5 @@
     <string name="cd_strobe_illustration">روشن/خاموش کردن استروب</string>
     <string name="cd_sos_illustration">روشن/خاموش کردن SOS</string>
     <string name="cd_strobe_speed">سرعت استروب</string>
+    <string name="cd_selected">انتخاب شده</string>
 </resources>

@@ -17,6 +17,18 @@
     <string name="turn_on">تشغيل</string>
     <string name="turn_off">إيقاف</string>
 
+    <string name="auto_off_label">إيقاف الضوء بعد</string>
+    <string name="never">أبدًا</string>
+    <string name="custom">مخصص</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="zero">%d د</item>
+        <item quantity="one">%d د</item>
+        <item quantity="two">%d د</item>
+        <item quantity="few">%d د</item>
+        <item quantity="many">%d د</item>
+        <item quantity="other">%d د</item>
+    </plurals>
+
     <string name="strobe_mode">وضع الوميض</string>
     <string name="strobe_caption">اضبط السرعة وابدأ</string>
     <string name="strobe_warning">قد تؤثر الأضواء الوامضة على المستخدمين ذوي الحساسية للضوء</string>
@@ -45,4 +57,5 @@
     <string name="cd_strobe_illustration">تشغيل/إيقاف الوميض</string>
     <string name="cd_sos_illustration">تشغيل/إيقاف SOS</string>
     <string name="cd_strobe_speed">سرعة الوميض</string>
+    <string name="cd_selected">محدد</string>
 </resources>

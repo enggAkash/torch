@@ -17,6 +17,14 @@
     <string name="turn_on">آن کریں</string>
     <string name="turn_off">آف کریں</string>
 
+    <string name="auto_off_label">اتنی دیر بعد لائٹ آف کریں</string>
+    <string name="never">کبھی نہیں</string>
+    <string name="custom">حسبِ ضرورت</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="one">%d منٹ</item>
+        <item quantity="other">%d منٹ</item>
+    </plurals>
+
     <string name="strobe_mode">اسٹروب موڈ</string>
     <string name="strobe_caption">رفتار ایڈجسٹ کریں اور شروع کریں</string>
     <string name="strobe_warning">جھپکتی روشنیاں روشنی سے حساس صارفین کو متاثر کر سکتی ہیں</string>
@@ -41,4 +49,5 @@
     <string name="cd_strobe_illustration">اسٹروب آن/آف کریں</string>
     <string name="cd_sos_illustration">SOS آن/آف کریں</string>
     <string name="cd_strobe_speed">اسٹروب کی رفتار</string>
+    <string name="cd_selected">منتخب کردہ</string>
 </resources>

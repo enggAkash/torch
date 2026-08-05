@@ -16,6 +16,12 @@
     <string name="tap_to_turn_off">ပိတ်ရန် ခလုတ်ကို နှိပ်ပါ</string>
     <string name="turn_on">ဖွင့်ရန်</string>
     <string name="turn_off">ပိတ်ရန်</string>
+    <string name="auto_off_label">သတ်မှတ်ချိန်ကြာပြီးနောက် မီးပိတ်ရန်</string>
+    <string name="never">ဘယ်တော့မှ</string>
+    <string name="custom">စိတ်ကြိုက်</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="other">%d မိနစ်</item>
+    </plurals>
 
     <string name="strobe_mode">မှိတ်တုတ်မုဒ်</string>
     <string name="strobe_caption">အမြန်နှုန်းချိန်ညှိပြီး စတင်ပါ</string>
@@ -40,4 +46,5 @@
     <string name="cd_strobe_illustration">မှိတ်တုတ်မီး ဖွင့်/ပိတ်ရန်</string>
     <string name="cd_sos_illustration">SOS ဖွင့်/ပိတ်ရန်</string>
     <string name="cd_strobe_speed">မှိတ်တုတ် အမြန်နှုန်း</string>
+    <string name="cd_selected">ရွေးချယ်ထားသည်</string>
 </resources>

@@ -16,6 +16,13 @@
     <string name="tap_to_turn_off">बंद करण्यासाठी बटण टॅप करा</string>
     <string name="turn_on">सुरू करा</string>
     <string name="turn_off">बंद करा</string>
+    <string name="auto_off_label">इतक्या वेळानंतर लाइट बंद करा</string>
+    <string name="never">कधीही नाही</string>
+    <string name="custom">कस्टम</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="one">%d मिनि</item>
+        <item quantity="other">%d मिनि</item>
+    </plurals>
 
     <string name="strobe_mode">स्ट्रोब मोड</string>
     <string name="strobe_caption">वेग सेट करा आणि सुरू करा</string>
@@ -41,4 +48,5 @@
     <string name="cd_strobe_illustration">स्ट्रोब टॉगल करा</string>
     <string name="cd_sos_illustration">SOS टॉगल करा</string>
     <string name="cd_strobe_speed">स्ट्रोबचा वेग</string>
+    <string name="cd_selected">निवडले आहे</string>
 </resources>

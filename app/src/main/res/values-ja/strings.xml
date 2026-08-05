@@ -17,6 +17,13 @@
     <string name="turn_on">オンにする</string>
     <string name="turn_off">オフにする</string>
 
+    <string name="auto_off_label">ライトを消すまでの時間</string>
+    <string name="never">なし</string>
+    <string name="custom">カスタム</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="other">%d分</item>
+    </plurals>
+
     <string name="strobe_mode">ストロボモード</string>
     <string name="strobe_caption">速度を調整して開始</string>
     <string name="strobe_warning">点滅する光は、光過敏症の方に影響を与える可能性があります</string>
@@ -40,4 +47,5 @@
     <string name="cd_strobe_illustration">ストロボを切り替え</string>
     <string name="cd_sos_illustration">SOSを切り替え</string>
     <string name="cd_strobe_speed">ストロボの速度</string>
+    <string name="cd_selected">選択済み</string>
 </resources>

@@ -17,6 +17,14 @@
     <string name="turn_on">Kunna</string>
     <string name="turn_off">Kashe</string>
 
+    <string name="auto_off_label">Kashe hasken bayan</string>
+    <string name="never">Faufau</string>
+    <string name="custom">Keɓantacce</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="one">Minti %d</item>
+        <item quantity="other">Minti %d</item>
+    </plurals>
+
     <string name="strobe_mode">Yanayin Strobe</string>
     <string name="strobe_caption">Daidaita sauri sannan ka fara</string>
     <string name="strobe_warning">Fitilu masu ƙyaftawa na iya shafar masu saurin kamuwa da tasirin haske</string>
@@ -41,4 +49,5 @@
     <string name="cd_strobe_illustration">Kunna ko kashe strobe</string>
     <string name="cd_sos_illustration">Kunna ko kashe SOS</string>
     <string name="cd_strobe_speed">Saurin strobe</string>
+    <string name="cd_selected">An zaɓa</string>
 </resources>

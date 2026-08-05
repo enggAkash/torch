@@ -17,6 +17,14 @@
     <string name="turn_on">هەڵکردن</string>
     <string name="turn_off">کوژاندنەوە</string>
 
+    <string name="auto_off_label">کوژاندنەوەی ڕووناکی دوای</string>
+    <string name="never">هەرگیز</string>
+    <string name="custom">دڵخواز</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="one">%d خولەک</item>
+        <item quantity="other">%d خولەک</item>
+    </plurals>
+
     <string name="strobe_mode">دۆخی ستروب</string>
     <string name="strobe_caption">خێراییەکە ڕێک بخە و دەست پێ بکە</string>
     <string name="strobe_warning">ڕووناکییە بریسکەدارەکان لەوانەیە کاریگەرییان هەبێت لەسەر بەکارهێنەرانی هەستیار بە ڕووناکی</string>
@@ -41,4 +49,5 @@
     <string name="cd_strobe_illustration">ستروب هەڵکە/بکوژێنەوە</string>
     <string name="cd_sos_illustration">SOS هەڵکە/بکوژێنەوە</string>
     <string name="cd_strobe_speed">خێرایی ستروب</string>
+    <string name="cd_selected">هەڵبژێردراوە</string>
 </resources>

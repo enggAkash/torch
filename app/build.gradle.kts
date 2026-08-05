@@ -9,14 +9,14 @@ plugins {
 
 android {
     namespace = "com.engineerakash.torch"
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "com.engineerakash.torch"
         minSdk = 23
-        targetSdk = 36
-        versionCode = 7
-        versionName = "2.1"
+        targetSdk = 37
+        versionCode = 8
+        versionName = "2.2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

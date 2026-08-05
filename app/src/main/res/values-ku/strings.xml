@@ -17,6 +17,14 @@
     <string name="turn_on">Vêxe</string>
     <string name="turn_off">Vemirîne</string>
 
+    <string name="auto_off_label">Piştî vê demê çirayê vemirîne</string>
+    <string name="never">Qet</string>
+    <string name="custom">Taybet</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="one">%d xulek</item>
+        <item quantity="other">%d xulek</item>
+    </plurals>
+
     <string name="strobe_mode">Moda Strobê</string>
     <string name="strobe_caption">Lezê eyar bike û dest pê bike</string>
     <string name="strobe_warning">Ronahiyên ku diçirûsin dibe ku bandorê li bikarhênerên li hember ronahiyê hestiyar bikin</string>
@@ -41,4 +49,5 @@
     <string name="cd_strobe_illustration">Strobê vêxe/vemirîne</string>
     <string name="cd_sos_illustration">SOSê vêxe/vemirîne</string>
     <string name="cd_strobe_speed">Leza strobê</string>
+    <string name="cd_selected">Hilbijartî</string>
 </resources>

@@ -17,6 +17,14 @@
     <string name="turn_on">ఆన్ చేయండి</string>
     <string name="turn_off">ఆఫ్ చేయండి</string>
 
+    <string name="auto_off_label">ఈ సమయం తర్వాత లైట్‌ను ఆఫ్ చేయండి</string>
+    <string name="never">ఎప్పటికీ వద్దు</string>
+    <string name="custom">అనుకూలం</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="one">%d నిమి</item>
+        <item quantity="other">%d నిమి</item>
+    </plurals>
+
     <string name="strobe_mode">స్ట్రోబ్ మోడ్</string>
     <string name="strobe_caption">వేగాన్ని సర్దుబాటు చేసి ప్రారంభించండి</string>
     <string name="strobe_warning">మెరిసే లైట్లు కాంతికి సున్నితంగా ఉండే వారిపై ప్రభావం చూపవచ్చు</string>
@@ -41,4 +49,5 @@
     <string name="cd_strobe_illustration">స్ట్రోబ్‌ను టోగుల్ చేయండి</string>
     <string name="cd_sos_illustration">SOSను టోగుల్ చేయండి</string>
     <string name="cd_strobe_speed">స్ట్రోబ్ వేగం</string>
+    <string name="cd_selected">ఎంచుకోబడింది</string>
 </resources>

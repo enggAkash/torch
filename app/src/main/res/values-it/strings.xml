@@ -17,6 +17,15 @@
     <string name="turn_on">Accendi</string>
     <string name="turn_off">Spegni</string>
 
+    <string name="auto_off_label">Spegni la luce dopo</string>
+    <string name="never">Mai</string>
+    <string name="custom">Personalizzato</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="one">%d min</item>
+        <item quantity="many">%d min</item>
+        <item quantity="other">%d min</item>
+    </plurals>
+
     <string name="strobe_mode">Modalità Strobo</string>
     <string name="strobe_caption">Regola la velocità e avvia</string>
     <string name="strobe_warning">Le luci intermittenti possono avere effetti sulle persone fotosensibili</string>
@@ -42,4 +51,5 @@
     <string name="cd_strobe_illustration">Attiva o disattiva lo strobo</string>
     <string name="cd_sos_illustration">Attiva o disattiva il segnale SOS</string>
     <string name="cd_strobe_speed">Velocità dello strobo</string>
+    <string name="cd_selected">Selezionato</string>
 </resources>

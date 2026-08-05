@@ -17,6 +17,13 @@
     <string name="turn_on">开启</string>
     <string name="turn_off">关闭</string>
 
+    <string name="auto_off_label">在以下时间后关闭灯光</string>
+    <string name="never">永不</string>
+    <string name="custom">自定义</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="other">%d 分钟</item>
+    </plurals>
+
     <string name="strobe_mode">频闪模式</string>
     <string name="strobe_caption">调节速度并开始</string>
     <string name="strobe_warning">闪烁的灯光可能会影响对光敏感的用户</string>
@@ -40,4 +47,5 @@
     <string name="cd_strobe_illustration">切换频闪</string>
     <string name="cd_sos_illustration">切换 SOS</string>
     <string name="cd_strobe_speed">频闪速度</string>
+    <string name="cd_selected">已选中</string>
 </resources>

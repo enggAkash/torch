@@ -17,6 +17,14 @@
     <string name="turn_on">चालू करें</string>
     <string name="turn_off">बंद करें</string>
 
+    <string name="auto_off_label">इतने समय बाद लाइट बंद करें</string>
+    <string name="never">कभी नहीं</string>
+    <string name="custom">कस्टम</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="one">%d मिनट</item>
+        <item quantity="other">%d मिनट</item>
+    </plurals>
+
     <string name="strobe_mode">स्ट्रोब मोड</string>
     <string name="strobe_caption">स्पीड सेट करें और शुरू करें</string>
     <string name="strobe_warning">चमकती रोशनी प्रकाश-संवेदनशील उपयोगकर्ताओं को प्रभावित कर सकती है</string>
@@ -41,4 +49,5 @@
     <string name="cd_strobe_illustration">स्ट्रोब टॉगल करें</string>
     <string name="cd_sos_illustration">SOS टॉगल करें</string>
     <string name="cd_strobe_speed">स्ट्रोब की स्पीड</string>
+    <string name="cd_selected">चुना गया</string>
 </resources>

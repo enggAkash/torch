@@ -17,6 +17,15 @@
     <string name="turn_on">Encender</string>
     <string name="turn_off">Apagar</string>
 
+    <string name="auto_off_label">Apagar la luz después de</string>
+    <string name="never">Nunca</string>
+    <string name="custom">Personalizado</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="one">%d min</item>
+        <item quantity="many">%d min</item>
+        <item quantity="other">%d min</item>
+    </plurals>
+
     <string name="strobe_mode">Modo estroboscópico</string>
     <string name="strobe_caption">Ajusta la velocidad y comienza</string>
     <string name="strobe_warning">Las luces intermitentes pueden afectar a las personas fotosensibles</string>
@@ -42,4 +51,5 @@
     <string name="cd_strobe_illustration">Activar o desactivar el estrobo</string>
     <string name="cd_sos_illustration">Activar o desactivar la señal SOS</string>
     <string name="cd_strobe_speed">Velocidad del estrobo</string>
+    <string name="cd_selected">Seleccionado</string>
 </resources>

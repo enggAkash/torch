@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Rounded ripple for an unselected sheet row; same press tint as the tab bar -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/tab_ripple">
+    <item android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+            <corners android:radius="12dp" />
+            <solid android:color="@color/white" />
+        </shape>
+    </item>
+</ripple>

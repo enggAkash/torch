@@ -17,6 +17,16 @@
     <string name="turn_on">Включить</string>
     <string name="turn_off">Выключить</string>
 
+    <string name="auto_off_label">Выключать свет через</string>
+    <string name="never">Никогда</string>
+    <string name="custom">Другое</string>
+    <plurals name="auto_off_minutes">
+        <item quantity="one">%d мин</item>
+        <item quantity="few">%d мин</item>
+        <item quantity="many">%d мин</item>
+        <item quantity="other">%d мин</item>
+    </plurals>
+
     <string name="strobe_mode">Режим стробоскопа</string>
     <string name="strobe_caption">Настройте скорость и запустите</string>
     <string name="strobe_warning">Мигающий свет может повлиять на светочувствительных пользователей</string>
@@ -43,4 +53,5 @@
     <string name="cd_strobe_illustration">Переключить стробоскоп</string>
     <string name="cd_sos_illustration">Переключить SOS</string>
     <string name="cd_strobe_speed">Скорость стробоскопа</string>
+    <string name="cd_selected">Выбрано</string>
 </resources>
