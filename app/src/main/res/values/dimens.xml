@@ -31,7 +31,7 @@
     <!-- Keeps a clear gap between the CTA and the ad banner directly below it, so a
          thumb aiming at one can't land on the other. Portrait only: the landscape
          layouts don't use this, they have their own tighter spacing. -->
-    <dimen name="cta_margin_bottom">32dp</dimen>
+    <dimen name="cta_margin_bottom">40dp</dimen>
 
     <!-- Floor for the banner slot so the CTA never shifts when an ad arrives.
          MainActivity replaces this with the exact adaptive banner height. -->
