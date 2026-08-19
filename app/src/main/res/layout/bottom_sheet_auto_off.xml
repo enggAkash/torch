@@ -17,7 +17,8 @@
         android:paddingEnd="@dimen/screen_margin_horizontal"
         android:paddingBottom="12dp"
         android:text="@string/auto_off_label"
-        android:textAppearance="@style/TextAppearance.Torch.StatusTitle" />
+        android:textAppearance="@style/TextAppearance.Torch.StatusTitle"
+        android:textColor="?attr/colorOnSurface" />
 
     <TextView
         android:id="@+id/autoOffNever"
@@ -32,7 +33,7 @@
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
         android:text="@string/never"
-        android:textColor="@color/text_primary"
+        android:textColor="?attr/colorOnSurface"
         android:textSize="16sp" />
 
     <TextView
@@ -47,7 +48,7 @@
         android:minHeight="52dp"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
-        android:textColor="@color/text_primary"
+        android:textColor="?attr/colorOnSurface"
         android:textSize="16sp"
         tools:text="5 min" />
 
@@ -63,7 +64,7 @@
         android:minHeight="52dp"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
-        android:textColor="@color/text_primary"
+        android:textColor="?attr/colorOnSurface"
         android:textSize="16sp"
         tools:text="10 min" />
 
@@ -79,7 +80,7 @@
         android:minHeight="52dp"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
-        android:textColor="@color/text_primary"
+        android:textColor="?attr/colorOnSurface"
         android:textSize="16sp"
         tools:text="30 min" />
 
@@ -95,7 +96,7 @@
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
         android:text="@string/custom"
-        android:textColor="@color/text_primary"
+        android:textColor="?attr/colorOnSurface"
         android:textSize="16sp" />
 
 </LinearLayout>

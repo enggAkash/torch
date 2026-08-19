@@ -4,14 +4,19 @@ import android.animation.Animator
 import android.animation.AnimatorInflater
 import android.app.Dialog
 import android.app.TimePickerDialog
+import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
+import android.content.res.Resources
 import android.graphics.Typeface
 import android.net.ConnectivityManager
 import android.net.Network
 import android.net.NetworkCapabilities
 import android.net.NetworkRequest
+import android.os.Build
 import android.os.Bundle
 import android.text.format.DateFormat
+import android.view.ContextThemeWrapper
 import android.view.Gravity
 import android.view.View
 import android.widget.FrameLayout
@@ -349,8 +354,30 @@ class MainActivity : AppCompatActivity() {
         )
     }
 
+    // The activity pins MODE_NIGHT_NO, but MIUI's per-app forced dark inverts light
+    // dialog surfaces even with forceDarkAllowed=false / force_dark_google set. So when
+    // the SYSTEM is in dark mode, dialogs are built from a true night-config context:
+    // they render natively dark (values-night colors) and the inverter leaves them alone.
+    private fun dialogContext(): Context {
+        val systemUiMode = Resources.getSystem().configuration.uiMode
+        if (systemUiMode and Configuration.UI_MODE_NIGHT_MASK != Configuration.UI_MODE_NIGHT_YES) {
+            return this
+        }
+        val config = Configuration(resources.configuration)
+        config.uiMode = Configuration.UI_MODE_NIGHT_YES or
+            (config.uiMode and Configuration.UI_MODE_NIGHT_MASK.inv())
+        // Keep the activity as base context (dialogs need its window token) and only
+        // override the configuration on the wrapper
+        return ContextThemeWrapper(this, R.style.Theme_Torch).apply {
+            applyOverrideConfiguration(config)
+        }
+    }
+
     private fun showAutoOffSheet() {
-        val sheet = BottomSheetDialog(this)
+        val sheet = BottomSheetDialog(dialogContext())
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            sheet.window?.decorView?.isForceDarkAllowed = false
+        }
         sheet.setContentView(R.layout.bottom_sheet_auto_off)
         val current = torchViewModel.autoOffSetting.value ?: AutoOffSetting.Never
 
@@ -393,7 +420,7 @@ class MainActivity : AppCompatActivity() {
         val current = torchViewModel.autoOffSetting.value as? AutoOffSetting.AtTime
         val now = Calendar.getInstance()
         val picker = TimePickerDialog(
-            this,
+            dialogContext(),
             { _, hour, minute -> torchViewModel.setAutoOff(AutoOffSetting.AtTime(hour, minute)) },
             current?.hour ?: now.get(Calendar.HOUR_OF_DAY),
             current?.minute ?: now.get(Calendar.MINUTE),

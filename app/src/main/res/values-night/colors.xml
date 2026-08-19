@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The activity pins MODE_NIGHT_NO, but on some OEM builds (e.g. MIUI forced dark)
+     BottomSheetDialog still resolves the night configuration, so its DayNight theme
+     gives it dark Material surfaces. These variants keep the sheet legible there;
+     the rest of the app never resolves night resources. -->
+<resources>
+    <color name="text_primary">#E6E1E9</color>
+    <color name="text_secondary">#A9A5B8</color>
+    <color name="tab_ripple">#336D4CFF</color>
+</resources>

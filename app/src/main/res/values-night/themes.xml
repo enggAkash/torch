@@ -1,9 +1,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. The app forces light mode (MODE_NIGHT_NO), so this
          mirrors the light theme to keep both configurations consistent. -->
-    <style name="Base.Theme.Torch" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.Torch" parent="Theme.Material3.DayNight.NoActionBar" tools:targetApi="q">
         <item name="colorPrimary">@color/purple_primary</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="android:windowBackground">@color/screen_background</item>
+        <!-- The app pins light mode; without this, OEM force dark inverts our windows -->
+        <item name="android:forceDarkAllowed">false</item>
     </style>
 </resources>
