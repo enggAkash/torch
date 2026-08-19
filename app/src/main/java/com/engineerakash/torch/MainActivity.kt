@@ -10,8 +10,10 @@ import android.net.ConnectivityManager
 import android.net.Network
 import android.net.NetworkCapabilities
 import android.net.NetworkRequest
+import android.os.Build
 import android.os.Bundle
 import android.text.format.DateFormat
+import android.view.Gravity
 import android.view.View
 import android.widget.FrameLayout
 import android.widget.ImageButton
@@ -194,9 +196,17 @@ class MainActivity : AppCompatActivity() {
         newAdView.setAdSize(adSize)
         adView = newAdView
 
-        // Replace ad container with new ad view.
+        // Replace ad container with new ad view. Centered: the ad is at most 360dp
+        // wide (see adSize) while the container spans the screen.
         adViewContainer.removeAllViews()
-        adViewContainer.addView(newAdView)
+        adViewContainer.addView(
+            newAdView,
+            FrameLayout.LayoutParams(
+                FrameLayout.LayoutParams.WRAP_CONTENT,
+                FrameLayout.LayoutParams.WRAP_CONTENT,
+                Gravity.CENTER_HORIZONTAL
+            )
+        )
 
         val adRequest = AdRequest.Builder().build()
         newAdView.loadAd(adRequest)
@@ -342,6 +352,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun showAutoOffSheet() {
         val sheet = BottomSheetDialog(this)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            sheet.window?.decorView?.isForceDarkAllowed = false
+        }
         sheet.setContentView(R.layout.bottom_sheet_auto_off)
         val current = torchViewModel.autoOffSetting.value ?: AutoOffSetting.Never
 

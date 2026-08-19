@@ -24,6 +24,13 @@
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-5354242864643274~2745507822"/>
 
+        <!-- MIUI/HyperOS: use AOSP Force Dark rules instead of MIUI's own inversion,
+             so the theme's forceDarkAllowed=false is honored (the app pins light mode;
+             MIUI would otherwise invert dialog windows to black behind dark text) -->
+        <meta-data
+            android:name="force_dark_google"
+            android:value="true" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

@@ -15,8 +15,8 @@ android {
         applicationId = "com.engineerakash.torch"
         minSdk = 23
         targetSdk = 37
-        versionCode = 8
-        versionName = "2.2"
+        versionCode = 9
+        versionName = "2.3"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
