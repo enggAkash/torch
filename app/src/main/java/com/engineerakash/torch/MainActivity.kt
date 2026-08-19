@@ -10,6 +10,7 @@ import android.net.ConnectivityManager
 import android.net.Network
 import android.net.NetworkCapabilities
 import android.net.NetworkRequest
+import android.os.Build
 import android.os.Bundle
 import android.text.format.DateFormat
 import android.view.Gravity
@@ -351,6 +352,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun showAutoOffSheet() {
         val sheet = BottomSheetDialog(this)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            sheet.window?.decorView?.isForceDarkAllowed = false
+        }
         sheet.setContentView(R.layout.bottom_sheet_auto_off)
         val current = torchViewModel.autoOffSetting.value ?: AutoOffSetting.Never
 
