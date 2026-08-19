@@ -1,7 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. The app forces light mode (MODE_NIGHT_NO), so this
-         mirrors the light theme to keep both configurations consistent. -->
-    <style name="Base.Theme.Torch" parent="Theme.Material3.DayNight.NoActionBar" tools:targetApi="q">
+    <!-- The app is light-only (MODE_NIGHT_NO). The explicit Light parent matters:
+         with a DayNight parent, dialogs that resolve this night variant (which
+         BottomSheetDialog does on first open under system dark mode) got the dark
+         Material palette behind light-configuration content. -->
+    <style name="Base.Theme.Torch" parent="Theme.Material3.Light.NoActionBar" tools:targetApi="q">
         <item name="colorPrimary">@color/purple_primary</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="android:windowBackground">@color/screen_background</item>
